@@ -1,6 +1,6 @@
 # Arquitectura
 
-Estado: **propuesta** con ADR-001 (2026-11-25). Se vuelve vigente cuando el Code Reviewer acepte ADR-001.
+Estado: **vigente** con ADR-001 aceptado (`714e575`, MEG-9) (2026-11-25).
 
 ## Vista general
 Una sola aplicación Next.js 16 que contiene la web pública y el CMS (Payload 3). Sin servicios propios adicionales.

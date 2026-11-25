@@ -1,6 +1,6 @@
 # ADR-001 · Stack, CMS, base de datos y hosting
 
-Estado: **propuesto** · Arquitecto · 2026-11-25 · revisión: Code Reviewer (MEG-9). Fecha de revisión de la decisión: al cerrar la spec 004 (editor de programas) y la spec 009 (rendimiento).
+Estado: **aceptado** · SHA aprobado `714e575` · Arquitecto · 2026-11-25 · revisión: Code Reviewer (MEG-9, «Aprobado · MEG-9 · `714e575`»). Fecha de revisión de la decisión: al cerrar la spec 004 (editor de programas) y la spec 009 (rendimiento).
 
 ## Contexto
 Megatravel Web necesita una web pública rápida (home, listados, detalle; RNF-01: Core Web Vitals en verde en móvil y ≥ 80 de rendimiento) y un CMS a medida para Editor, Marketing y Administrador, con roles validados en servidor, vista previa, historial, subida de imágenes, video y fotos de pasajeros que se borran de verdad (RF-26 a RF-43, RF-34b, RNF-07 a RNF-10). La migración parte de exportaciones de la web actual (Next.js 16 + Payload 3 + PostgreSQL en Railway, RF-47) y la web actual no se toca (art. 20, RNF-14). El Board prefiere Next.js, React, Tailwind, PostgreSQL y Railway, sin tope fijo de costo pero con gasto óptimo (RNF-12).

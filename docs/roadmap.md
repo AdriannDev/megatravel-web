@@ -5,8 +5,8 @@ Estado: **borrador** (2026-11-25). Product y Arquitecto lo confirman al cerrar l
 ## Specs
 | NNN | Spec | Prioridad | Depende de | Sensible (seguridad) | Estado |
 |---|---|---|---|---|---|
-| 000 | Descubrimiento: brief validado, requisitos EARS, inventario de contenido y URLs actuales | Must | — | — | Pendiente |
-| 001 | Fundaciones: ADR de stack y CMS, scaffold, CI con sensores, `stop_check_command`, preview, rama `develop` | Must | 000 | Sí (auth del CMS) | Pendiente |
+| 000 | Descubrimiento: brief validado, requisitos EARS, inventario de contenido y URLs actuales | Must | — | — | Hecha |
+| 001 | Fundaciones: ADR de stack y CMS, scaffold, CI con sensores, `stop_check_command`, preview, rama `develop` | Must | 000 | Sí (auth del CMS) | En curso |
 | 002 | Sistema de diseño: tokens, componentes base, guía visual de la web y del CMS | Must | 001 | — | Pendiente |
 | 003 | Modelo de contenido y CMS base: programas, salidas, zonas, banners, home; roles y vista previa | Must | 001 | Sí | Pendiente |
 | 004 | Editor de programas a medida (subida de fotos, itinerario, hoteles, tarifas, suplementos, tours) | Must | 002, 003 | Sí (subida de archivos, fotos de pasajeros) | Pendiente |
@@ -38,3 +38,4 @@ Cambios de una frase y 1–2 archivos, sin spec (siguen pasando por Code Reviewe
 
 | Fecha | Issue | Cambio | SHA |
 |---|---|---|---|
+| 2026-11-25 | MEG-12 | ADR-001 aceptado (`714e575`), `arquitectura.md` vigente; roadmap: 000 hecha, 001 en curso | `ef003df` |
