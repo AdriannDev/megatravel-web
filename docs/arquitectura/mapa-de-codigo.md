@@ -28,6 +28,6 @@ Aún no hay código: la columna "Ejemplo existente" se rellena en la spec 001 co
 ## Reglas de ubicación
 - Si una utilidad la usa un solo módulo, vive junto a ese módulo; pasa a la carpeta compartida al tercer uso.
 - Una consulta a Payload vive en la ruta que la usa. Si tres rutas repiten la misma consulta, se mueve a una función en la carpeta de la ruta común más cercana (p. ej. `src/app/(frontend)/_datos/`), nunca a un "repositorio".
-- Un hook de Payload vive con su colección; si lo usan tres colecciones (p. ej. historial o invalidación de caché), pasa a `src/collections/_compartido/`.
+- Un hook de Payload vive con su colección; si lo usan tres colecciones (p. ej. historial), pasa a `src/collections/_compartido/`.
 - No se crean carpetas `utils2`, `helpers-new`, `services`, `repositories` ni similares: se extiende la existente.
 - Nada de texto comercial en el código (art. 21): los textos visibles vienen del CMS; solo los mensajes de interfaz (errores, etiquetas de formulario) pueden vivir en componentes.

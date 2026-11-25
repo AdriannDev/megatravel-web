@@ -67,7 +67,7 @@ La plantilla oficial no se usa tal cual. Trae cosas que este ADR no autoriza ([m
 
 ### Lo que no se usa en la v1 (y por qué)
 - Motor de búsqueda externo: el catálogo son cientos de salidas; los filtros (RF-09) se resuelven con consultas de Payload sobre PostgreSQL.
-- Cron de retiro: la vigencia (corte RF-23, fin de banner RF-07, cupos RF-18) se evalúa al servir cada solicitud. En v1 las lecturas públicas van a PostgreSQL sin caché de datos y ninguna página pública usa ISR. La caché de datos del contenido sin límites solo se habilita si pasa la prueba de orden de G3 en la compilación de producción. Las garantías G1, G2 y G3 y sus pruebas están en `arquitectura.md`.
+- Cron de retiro: la vigencia (corte RF-23, fin de banner RF-07, cupos RF-18) se evalúa al servir cada solicitud. En v1 las lecturas públicas van a PostgreSQL sin caché de datos y ninguna página pública usa ISR. Caché de datos de Next: no se usa en v1 para ningún contenido (un sensor rechaza `next/cache` y `"use cache"`); habilitarla requiere un ADR con las pruebas de caché caliente y de orden. Las garantías G1, G2 y G3 y sus pruebas están en `arquitectura.md`.
 - API GraphQL de Payload y `/api/public/catalog`: no hay consumidor. GraphQL se desactiva (`graphql` sigue instalado como dependencia par) y el catálogo no se crea, salvo que una spec lo pida.
 - Librería de validación aparte (Zod u otras): se usan las validaciones de campo de Payload y funciones puras en `src/lib`.
 
