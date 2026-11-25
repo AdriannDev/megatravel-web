@@ -36,6 +36,7 @@ Perfil: **M** (ver `docs/00-proyecto.md`). Marco del equipo: `/home/producto/dev
 - Una tarea que no cabe en una sesión estaba mal dimensionada: dilo en el handoff.
 
 ## Handoff (al cerrar cada run)
+La skill puede aparecer con sufijo (p. ej. `handoff--7f46fe5d96`): Paperclip lo añade a las skills de la empresa. Si no la encuentras, este formato basta.
 Comentario en el issue: **Hecho · Pendiente · Archivos tocados · Comandos y resultado · Siguiente paso · Contexto**. Actualiza `tasks.md` y haz push de tu rama. Commits en Conventional Commits, en inglés, en imperativo, **sin líneas Co-Authored-By ni menciones a herramientas de IA** (Claude, Codex u otras).
 
 ## Comandos
