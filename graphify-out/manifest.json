@@ -42,9 +42,9 @@
     "semantic_hash": ""
   },
   ".claude/settings.json": {
-    "mtime": 1795617891.4602237,
-    "seen": 1795617906.3321116,
-    "ast_hash": "196132622e1989b54b591479b36de68e",
+    "mtime": 1795626482.070641,
+    "seen": 1795626722.6596513,
+    "ast_hash": "c0c3eb70f95f3920a54dd0d68711d75c",
     "semantic_hash": ""
   },
   ".codex/hooks.json": {
@@ -60,9 +60,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1795617891.5336053,
-    "seen": 1795617906.3321137,
-    "ast_hash": "432eac60fc74722d487f09079f079f0f",
+    "mtime": 1795626487.6212249,
+    "seen": 1795626722.6596582,
+    "ast_hash": "7f26b0fb42490b755b4493c5e7cbc927",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
@@ -72,9 +72,9 @@
     "semantic_hash": ""
   },
   "docs/00-proyecto.md": {
-    "mtime": 1795617891.2364216,
-    "seen": 1795617906.3321152,
-    "ast_hash": "fc1609f2824a81ab9dc203faa64b36ef",
+    "mtime": 1795626432.071215,
+    "seen": 1795626722.6596599,
+    "ast_hash": "bb87ee49b0e9e99a809c188a498bee3f",
     "semantic_hash": ""
   },
   "docs/arquitectura/adr/ADR-000-plantilla.md": {
@@ -90,9 +90,9 @@
     "semantic_hash": ""
   },
   "docs/arquitectura/constitucion.md": {
-    "mtime": 1795617891.2351341,
-    "seen": 1795617906.3321173,
-    "ast_hash": "0b56ddc0e11ee440d81377cc1196dd18",
+    "mtime": 1795617963.390411,
+    "seen": 1795626722.659662,
+    "ast_hash": "610d1c4b4adb0d1468e1348eaa3514c4",
     "semantic_hash": ""
   },
   "docs/arquitectura/mapa-de-codigo.md": {
@@ -108,9 +108,9 @@
     "semantic_hash": ""
   },
   "docs/producto/brief.md": {
-    "mtime": 1795617891.2335167,
-    "seen": 1795617906.3321192,
-    "ast_hash": "07e0da5b9e7f0cf38092ee2b459e3a17",
+    "mtime": 1795617982.8318336,
+    "seen": 1795626722.6596646,
+    "ast_hash": "2eeee5f769b592c9a78c6d8cb6a164f7",
     "semantic_hash": ""
   },
   "docs/producto/requisitos.md": {
@@ -120,9 +120,9 @@
     "semantic_hash": ""
   },
   "docs/roadmap.md": {
-    "mtime": 1795617891.2364476,
-    "seen": 1795617906.332121,
-    "ast_hash": "8eb6e5b6c9d2c830b56b81914a316997",
+    "mtime": 1795626424.1659782,
+    "seen": 1795626722.659666,
+    "ast_hash": "6e7c62b52320bc56091dae9e9aee74ff",
     "semantic_hash": ""
   },
   "docs/specs/000-plantilla/plan.md": {
@@ -132,15 +132,39 @@
     "semantic_hash": ""
   },
   "docs/specs/000-plantilla/spec.md": {
-    "mtime": 1795617891.2360878,
-    "seen": 1795617906.3321226,
-    "ast_hash": "6a97cb5451685035f57b2438f2be0a2f",
+    "mtime": 1795626424.158607,
+    "seen": 1795626722.659668,
+    "ast_hash": "0554258aaf62837469153cdd2676823e",
     "semantic_hash": ""
   },
   "docs/specs/000-plantilla/tasks.md": {
     "mtime": 1795617891.2361364,
     "seen": 1795617906.3321233,
     "ast_hash": "7b00cb5661bbe15356539b2eb7904269",
+    "semantic_hash": ""
+  },
+  ".githooks/post-checkout": {
+    "mtime": 1795617906.4216027,
+    "seen": 1795626722.659654,
+    "ast_hash": "74f885e45f9bfb0c124bf010800e249e",
+    "semantic_hash": ""
+  },
+  ".githooks/post-commit": {
+    "mtime": 1795617906.4214659,
+    "seen": 1795626722.6596549,
+    "ast_hash": "0c5c04a77f0e6baf244d6ed58e621062",
+    "semantic_hash": ""
+  },
+  ".githooks/post-merge": {
+    "mtime": 1795617906.4216561,
+    "seen": 1795626722.6596556,
+    "ast_hash": "19d97b6ad913907e0705734150df83f8",
+    "semantic_hash": ""
+  },
+  ".githooks/post-rewrite": {
+    "mtime": 1795617906.421704,
+    "seen": 1795626722.6596565,
+    "ast_hash": "81728105258e69cf68aa83612f5b6b3a",
     "semantic_hash": ""
   }
 }
