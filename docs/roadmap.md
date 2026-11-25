@@ -3,7 +3,7 @@
 Estado: **borrador** (2026-11-25). Product y Arquitecto lo confirman al cerrar la spec 000 y el ADR-001.
 
 ## Specs
-| NNN | Spec | Prioridad | Depende de | Security | Estado |
+| NNN | Spec | Prioridad | Depende de | Sensible (seguridad) | Estado |
 |---|---|---|---|---|---|
 | 000 | Descubrimiento: brief validado, requisitos EARS, inventario de contenido y URLs actuales | Must | — | — | Pendiente |
 | 001 | Fundaciones: ADR de stack y CMS, scaffold, CI con sensores, `stop_check_command`, preview, rama `develop` | Must | 000 | Sí (auth del CMS) | Pendiente |
@@ -22,7 +22,7 @@ Orden sugerido: una spec en implementación a la vez al principio (000 → 001 �
 ## Primera tanda de issues (las crea el Board en Paperclip)
 
 ### CP0 · Arranque del proyecto — Auditor
-Ejecuta el checkpoint CP0 con la skill `checkpoint-auditoria` sobre `~/dev/megatravel-web`. Comprueba perfil M en `docs/00-proyecto.md`, configuración de los 13 agentes contra `/home/producto/dev/marco-equipo/docs/08-configurar-paperclip.md` §3, permisos, `core.hooksPath`, Graphify y tamaño de AGENTS.md. Informe en `docs/auditoria/CP0.md`.
+Ejecuta el checkpoint CP0 con la skill `checkpoint-auditoria` sobre `~/dev/megatravel-web`. Comprueba perfil M en `docs/00-proyecto.md`, configuración de los 12 agentes contra `/home/producto/dev/marco-equipo/docs/08-configurar-paperclip.md` §3, permisos, `core.hooksPath`, Graphify y tamaño de AGENTS.md. Informe en `docs/auditoria/CP0.md`.
 
 ### Spec 000 · Brief y requisitos — Product Analyst (revisión: Arquitecto)
 Objetivo: validar y completar `docs/producto/brief.md` y escribir `docs/producto/requisitos.md` en EARS. Resuelve con el Board los `[NEEDS CLARIFICATION]` del brief (pregúntalos en este issue). Inventaria el contenido y las URLs de la web actual leyendo, solo lectura, `/mnt/c/Users/KelingMireyaMachacua/CLAUDE PROYECTOS/megatravel/bloqueosweb/docs/datos-y-api.md` y `docs/arquitectura.md`. Lectura mínima: brief, constitución, plantilla de requisitos. Cierra con handoff.
