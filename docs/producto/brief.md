@@ -1,6 +1,6 @@
 # Brief · Megatravel Web
 
-Estado: **listo para revisión** (v2, 2026-11-25). Validado por el Product Analyst contra `requisitos.md` y el inventario de bloqueosweb. Las preguntas P1–P10 se hicieron al Board en MEG-7 en un solo comentario y **el Board respondió el 2026-11-25**; las respuestas están incorporadas. Lo que sigue abierto queda marcado `[NEEDS CLARIFICATION]`. Pendiente de aprobación del Arquitecto.
+Estado: **aprobado por Arquitecto · SHA: 0dfccfe · 2026-11-25** (v2). Validado por el Product Analyst contra `requisitos.md` y el inventario de bloqueosweb. Las preguntas P1–P10 se hicieron al Board en MEG-7 en un solo comentario y **el Board respondió el 2026-11-25**; las respuestas están incorporadas. Lo que sigue abierto queda marcado `[NEEDS CLARIFICATION]`.
 
 ## Problema
 bloqueosmegatravel.pe es hoy una landing de bloqueos. Se quiere convertir en una **web de viajes para asesores de agencias de Perú**, con contenido rico por programa y un CMS hecho a medida para que el equipo de producto cree y mantenga todo sin depender de desarrollo.

@@ -1,6 +1,6 @@
 # Requisitos
 
-Estado: **listo para revisión** (v3, 2026-11-25) · respuestas del Board a P1–P10 y cambios pedidos por el Arquitecto incorporados (MEG-7); pendiente de aprobación del Arquitecto. Quedan abiertos los `[NEEDS CLARIFICATION]` indicados.
+Estado: **aprobada por Arquitecto · SHA: 0dfccfe · 2026-11-25** (v3) · respuestas del Board a P1–P10 y cambios pedidos por el Arquitecto incorporados (MEG-7). Quedan abiertos los `[NEEDS CLARIFICATION]` indicados; no bloquean ADR-001 y se resuelven en la spec que los use.
 
 Formato EARS. Cada requisito tiene un ID estable (`RF-xx` funcional, `RNF-xx` no funcional) que las specs referencian. Prioridad MoSCoW: M = Must, S = Should, C = Could, W = Won't (v1).
 
