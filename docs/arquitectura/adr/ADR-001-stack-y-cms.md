@@ -43,14 +43,32 @@ Se elige **A**: una única aplicación **Next.js 16 (App Router) + React 19 + Pa
 | `tailwindcss`, `@tailwindcss/postcss` | Estilos de la web pública a partir de tokens (spec 002). |
 | `typescript` | Tipos (dev). |
 
-Las dependencias pares que exijan estos paquetes oficiales quedan cubiertas; la spec 001 las lista con versión. `@payloadcms/richtext-lexical` queda **autorizado solo cuando una spec necesite texto con formato** (p. ej. condiciones del programa); no se instala en la spec 001. Las herramientas de calidad (lint, tests, jscpd, knip, dependency-cruiser, Lighthouse CI, escaneo de secretos) se deciden en el **ADR-002 · Calidad y sensores** de la spec 001. Cualquier otra dependencia necesita su ADR.
+Dependencias que estos paquetes exigen como pares: quedan cubiertas y la spec 001 las lista con versión. En particular, `graphql` (`^16.8.1`) es dependencia par de `payload` y de `@payloadcms/next`, así que **se instala aunque la API GraphQL esté desactivada**: la config usa `graphQL: { disable: true }` y el scaffold elimina las rutas `src/app/(payload)/api/graphql/` y `graphql-playground/` de la plantilla.
 
-Versiones de partida (MEG-8, 2026-11-25): Payload **3.94.x**, Next.js **16.4.x (≥ 16.4.5)**, Node.js **24 LTS**, npm (incluido en Node, sin gestor extra). La versión mayor de PostgreSQL será la que ofrezca Railway y soporte el adaptador; la spec 001 la fija en `package.json`/`engines` y en `arquitectura.md`.
+Autorizados **solo cuando una spec los necesite**, sin ADR nuevo (paquetes oficiales de Payload, MIT). No se instalan en la spec 001:
+- `@payloadcms/richtext-lexical`: cuando haga falta texto con formato (p. ej. condiciones del programa).
+- `@payloadcms/live-preview-react`: en la spec de vista previa (RF-39).
+
+Quien los instale actualiza en la misma spec la tabla de capas de `arquitectura.md`. Las herramientas de calidad (lint, tests, jscpd, knip, dependency-cruiser, Lighthouse CI, escaneo de secretos) se deciden en el **ADR-002 · Calidad y sensores** de la spec 001. Cualquier otra dependencia necesita su ADR.
+
+Versiones de partida (MEG-8, 2026-11-25): Payload **3.94.x**, Next.js **16.4.x (≥ 16.4.5)**, Node.js **24 LTS ≥ 24.22.3** (ver el scaffold, abajo), npm (incluido en Node, sin gestor extra). La versión mayor de PostgreSQL será la que ofrezca Railway y soporte el adaptador; la spec 001 la fija en `package.json`/`engines` y en `arquitectura.md`.
+
+### Scaffold de partida: plantilla `blank` de Payload 3.94.2 adaptada
+La plantilla oficial no se usa tal cual. Trae cosas que este ADR no autoriza ([manifiesto](https://github.com/payloadcms/payload/blob/v3.94.2/templates/blank/package.json), [config](https://github.com/payloadcms/payload/blob/v3.94.2/templates/blank/src/payload.config.ts)). La spec 001 aplica estos cambios y los comprueba en el diff:
+- **Base de datos**: sustituye `@payloadcms/db-mongodb` (`mongooseAdapter`) por `@payloadcms/db-postgres` (`postgresAdapter`).
+- **Editor**: retira `@payloadcms/richtext-lexical` de `package.json` y la línea `editor: lexicalEditor()` de la config. En 3.94.2 `editor` es opcional en `Config` y sin campos `richText` no se usa. Regenera el import map (`payload generate:importmap`) para que no quede ninguna referencia al editor.
+- **GraphQL**: `graphQL: { disable: true }`, sin las dos rutas de GraphQL. `graphql` se queda como dependencia par.
+- **Herramientas de desarrollo** de la plantilla (`cross-env`, `tsx`, ESLint, Vitest, Playwright…): se quedan solo las que justifique el ADR-002. El resto se retira.
+- **Node.js**: Payload 3.94.2 y `@payloadcms/next` exigen `^22.23.5 || ^24.22.3 || >=26.13.1`. Dentro de Node 24 LTS el mínimo es **24.22.3**. La misma versión se fija en los tres sitios:
+  - local: `.nvmrc` con la versión exacta (24.22.3 o el último parche de la 24 disponible al crear el scaffold);
+  - CI: `actions/setup-node` con `node-version-file: .nvmrc`;
+  - Railway: la misma versión en la configuración de build.
+  `package.json` declara `"engines": { "node": ">=24.22.3 <25" }`. La spec 001 pega en el handoff la versión efectiva que muestran el log de CI y el de build de Railway.
 
 ### Lo que no se usa en la v1 (y por qué)
 - Motor de búsqueda externo: el catálogo son cientos de salidas; los filtros (RF-09) se resuelven con consultas de Payload sobre PostgreSQL.
-- Cron de retiro: la vigencia (corte RF-23, fin de banner RF-07, cupos RF-18) se calcula al consultar; la caché tiene vida máxima corta (ver `arquitectura.md`).
-- API GraphQL de Payload y `/api/public/catalog`: no hay consumidor; se desactivan o no se crean salvo que una spec lo pida.
+- Cron de retiro: la vigencia (corte RF-23, fin de banner RF-07, cupos RF-18) se evalúa al servir cada solicitud sobre la lectura cacheada; las páginas con límites no usan ISR (garantía y prueba en `arquitectura.md`).
+- API GraphQL de Payload y `/api/public/catalog`: no hay consumidor. GraphQL se desactiva (`graphql` sigue instalado como dependencia par) y el catálogo no se crea, salvo que una spec lo pida.
 - Librería de validación aparte (Zod u otras): se usan las validaciones de campo de Payload y funciones puras en `src/lib`.
 
 ### Costo mensual estimado (RNF-12)

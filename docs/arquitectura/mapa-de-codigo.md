@@ -9,6 +9,7 @@ Aún no hay código: la columna "Ejemplo existente" se rellena en la spec 001 co
 | Páginas y rutas públicas (home, listados, detalle, vista previa) | `src/app/(frontend)/` | — |
 | Rutas del panel y API de Payload (generadas, no se editan a mano) | `src/app/(payload)/` | — |
 | Componentes de UI pública reutilizables (reciben datos por props) | `src/components/` | — |
+| Módulos de cliente (`"use client"`), en cualquier carpeta que los admita | sufijo obligatorio `*.client.ts` / `*.client.tsx`, salvo `error.tsx` y `global-error.tsx` de Next (frontera cliente/servidor en `arquitectura.md`) | — |
 | Componentes y vistas del panel a medida (CMS) | `src/admin/` | — |
 | Colecciones de Payload (campos, validaciones, hooks propios de la colección al lado) | `src/collections/` (un archivo, o carpeta si crece, por colección) | — |
 | Globals de Payload (home, configuración) | `src/globals/` | — |
@@ -16,11 +17,13 @@ Aún no hay código: la columna "Ejemplo existente" se rellena en la spec 001 co
 | Configuración de Payload | `src/payload.config.ts` | — |
 | Tipos de contenido (generados por `payload generate:types`) | `src/payload-types.ts` | — |
 | Utilidades puras del dominio (vigencia y corte, cupos, filtros de URL, formatos de precio y fecha) | `src/lib/` | — |
-| Tokens de diseño y estilos globales | `src/styles/` | — |
+| Tokens de diseño y estilos globales (solo CSS; los importa el layout de `src/app/(frontend)/`) | `src/styles/` | — |
+| Redirecciones por código (si la spec 009 no las resuelve en `next.config`) | `src/proxy.ts` | — |
 | Migraciones de esquema (generadas por `payload migrate:create`) | `src/migrations/` | — |
 | Scripts de una vez (migración de datos, semillas) | `scripts/` | — |
 | Tests unitarios y de integración | junto al archivo: `*.test.ts` / `*.test.tsx` | — |
 | Tests end-to-end | `tests/e2e/` | — |
+| Fixtures de los sensores (importaciones prohibidas que deben fallar) | los fija la spec 001 dentro de `tests/` | — |
 
 ## Reglas de ubicación
 - Si una utilidad la usa un solo módulo, vive junto a ese módulo; pasa a la carpeta compartida al tercer uso.
