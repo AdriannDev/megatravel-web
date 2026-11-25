@@ -1,0 +1,4 @@
+# Configuración de Codex para este proyecto (marco-equipo, docs/04).
+# Paperclip no permite `-c` en Extra args con conexión gestionada; este archivo sí (sin claves de autenticación).
+# Techo de contexto: compactar al llegar a ~100k tokens (50 % de la ventana de trabajo de 200k).
+model_auto_compact_token_limit = 100000

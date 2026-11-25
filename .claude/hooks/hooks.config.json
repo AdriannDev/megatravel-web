@@ -1,0 +1,26 @@
+{
+  "_comentario": "Configuración de los hooks del proyecto. Edita este archivo, no los scripts. stop_check_command se rellena en la spec 001 (p. ej. 'npm run check:fast').",
+  "stop_check_command": "",
+  "protected_patterns": [
+    ".env", ".env.local", ".env.development", ".env.production",
+    "secrets/", ".pem", ".key",
+    "package-lock.json", "pnpm-lock.yaml", "yarn.lock", "uv.lock", "poetry.lock",
+    ".git/", ".githooks/"
+  ],
+  "protected_exceptions": [".env.example", ".env.sample"],
+  "destructive_patterns": [
+    "rm -rf", "rm -fr", "rm -r -f", "rm -f -r",
+    "git push --force", "git push -f", "git push --force-with-lease",
+    "git reset --hard", "git clean -f", "git clean -fd", "git checkout -- .",
+    "git branch -D", "drop table", "drop database", "truncate table", "mkfs"
+  ],
+  "protected_branch_regexes": [
+    "\\bgit\\s+push\\b[^;&|]*?(?:\\s|:)(?:refs/heads/)?(?:main|master)(?=$|[\\s;&|])",
+    "\\bgit\\s+(?:checkout|switch)\\s+(?:-\\S+\\s+)*(?:main|master)(?=$|[\\s;&|])",
+    "\\bgit\\s+update-ref\\s+refs/heads/(?:main|master)\\b",
+    "\\bgit\\s+branch\\s+(?:-f|--force)\\s+(?:main|master)\\b",
+    "ALLOW_MAIN_UPDATE",
+    "core\\.hooksPath"
+  ],
+  "session_start_message": "Marco de equipo activo. Lee el contrato del issue y solo la lectura mínima que indica. Usa graphify query antes de grep o de leer archivos. Al 40 % de contexto: handoff y cierra el run. Nunca toques main."
+}

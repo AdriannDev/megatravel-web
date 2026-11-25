@@ -1,0 +1,30 @@
+# Dependencias y builds
+node_modules/
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Entorno y secretos
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+
+# Paperclip (worktrees por issue)
+.paperclip/
+
+# Graphify: caché local (el grafo se versiona o no según decida el ADR de la spec 001)
+graphify-out/cache/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Python
+__pycache__/
+*.pyc

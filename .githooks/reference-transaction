@@ -1,0 +1,18 @@
+#!/bin/sh
+# Rechaza cualquier actualización local de refs/heads/main (commit, merge, reset, branch -f, update-ref)
+# salvo que el humano la haga con ALLOW_MAIN_UPDATE=1. Aplica a todos los worktrees del repo
+# y a todos los agentes (Claude, Codex, Antigravity). Activar con: git config core.hooksPath .githooks
+# La protección real es la regla de rama en GitHub; esta es la red local.
+[ "$1" = "prepared" ] || exit 0
+[ "$ALLOW_MAIN_UPDATE" = "1" ] && exit 0
+while read -r old new ref; do
+  case "$ref" in
+    refs/heads/main|refs/heads/master)
+      # Permitir la creación inicial de main en un repo vacío.
+      if [ "$old" = "0000000000000000000000000000000000000000" ]; then continue; fi
+      echo "BLOQUEADO: $ref solo lo actualiza el humano tras CP4 (usa ALLOW_MAIN_UPDATE=1 desde tu terminal)." >&2
+      exit 1
+      ;;
+  esac
+done
+exit 0
