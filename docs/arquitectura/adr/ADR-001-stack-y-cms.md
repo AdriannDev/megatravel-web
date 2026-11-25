@@ -67,7 +67,7 @@ La plantilla oficial no se usa tal cual. Trae cosas que este ADR no autoriza ([m
 
 ### Lo que no se usa en la v1 (y por qué)
 - Motor de búsqueda externo: el catálogo son cientos de salidas; los filtros (RF-09) se resuelven con consultas de Payload sobre PostgreSQL.
-- Cron de retiro: la vigencia (corte RF-23, fin de banner RF-07, cupos RF-18) se evalúa al servir cada solicitud sobre la lectura cacheada; las páginas con límites no usan ISR (garantía y prueba en `arquitectura.md`).
+- Cron de retiro: la vigencia (corte RF-23, fin de banner RF-07, cupos RF-18) se evalúa al servir cada solicitud. Los datos con límite se leen de PostgreSQL sin caché de datos y las páginas con límites no usan ISR. Las garantías G1 y G2 y sus pruebas están en `arquitectura.md`.
 - API GraphQL de Payload y `/api/public/catalog`: no hay consumidor. GraphQL se desactiva (`graphql` sigue instalado como dependencia par) y el catálogo no se crea, salvo que una spec lo pida.
 - Librería de validación aparte (Zod u otras): se usan las validaciones de campo de Payload y funciones puras en `src/lib`.
 

@@ -23,7 +23,7 @@ Aún no hay código: la columna "Ejemplo existente" se rellena en la spec 001 co
 | Scripts de una vez (migración de datos, semillas) | `scripts/` | — |
 | Tests unitarios y de integración | junto al archivo: `*.test.ts` / `*.test.tsx` | — |
 | Tests end-to-end | `tests/e2e/` | — |
-| Fixtures de los sensores (importaciones prohibidas que deben fallar) | los fija la spec 001 dentro de `tests/` | — |
+| Casos de los sensores (importaciones prohibidas que deben fallar), guardados como texto y escritos en un árbol temporal al ejecutar el test (ver `arquitectura.md`) | `tests/sensores/` | — |
 
 ## Reglas de ubicación
 - Si una utilidad la usa un solo módulo, vive junto a ese módulo; pasa a la carpeta compartida al tercer uso.
