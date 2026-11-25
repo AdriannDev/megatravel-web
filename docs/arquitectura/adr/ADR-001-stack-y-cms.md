@@ -19,7 +19,7 @@ Entradas: `docs/producto/brief.md` y `docs/producto/requisitos.md` (aprobados, S
 ### Hosting
 | Opción | A favor | En contra |
 |---|---|---|
-| **Railway (Pro): un servicio Next.js + Payload y PostgreSQL gestionado** | Preferencia del Board y plataforma que el equipo ya opera con la web actual. Proceso de larga duración: encaja con Payload (subidas, `sharp`, conexiones persistentes a PostgreSQL). Entornos separados (staging, producción) en el mismo proyecto. Facturación por consumo. | Suelo de USD 20/mes en Pro. Sin CDN de páginas integrada: el rendimiento depende de la caché de Next.js y de servir medios desde R2. |
+| **Railway (Pro): un servicio Next.js + Payload y PostgreSQL gestionado** | Preferencia del Board y plataforma que el equipo ya opera con la web actual. Proceso de larga duración: encaja con Payload (subidas, `sharp`, conexiones persistentes a PostgreSQL). Entornos separados (staging, producción) en el mismo proyecto. Facturación por consumo. | Suelo de USD 20/mes en Pro. Sin CDN de páginas integrada: el rendimiento depende del render de servidor con consultas indexadas y de servir medios desde R2. |
 | Vercel + PostgreSQL gestionado externo (p. ej. Neon) | Plataforma nativa de Next.js, CDN global y previews por PR. | Dos proveedores y dos facturas; ejecución serverless que obliga a usar pooling de conexiones con Payload y limita tiempo y memoria en subidas e imágenes. Fuera de la preferencia del Board. Costo no estudiado por el Researcher. |
 
 ### Medios (imágenes, video, fotos de pasajeros)
@@ -67,7 +67,7 @@ La plantilla oficial no se usa tal cual. Trae cosas que este ADR no autoriza ([m
 
 ### Lo que no se usa en la v1 (y por qué)
 - Motor de búsqueda externo: el catálogo son cientos de salidas; los filtros (RF-09) se resuelven con consultas de Payload sobre PostgreSQL.
-- Cron de retiro: la vigencia (corte RF-23, fin de banner RF-07, cupos RF-18) se evalúa al servir cada solicitud. Los datos con límite se leen de PostgreSQL sin caché de datos y las páginas con límites no usan ISR. Las garantías G1 y G2 y sus pruebas están en `arquitectura.md`.
+- Cron de retiro: la vigencia (corte RF-23, fin de banner RF-07, cupos RF-18) se evalúa al servir cada solicitud. En v1 las lecturas públicas van a PostgreSQL sin caché de datos y ninguna página pública usa ISR. La caché de datos del contenido sin límites solo se habilita si pasa la prueba de orden de G3 en la compilación de producción. Las garantías G1, G2 y G3 y sus pruebas están en `arquitectura.md`.
 - API GraphQL de Payload y `/api/public/catalog`: no hay consumidor. GraphQL se desactiva (`graphql` sigue instalado como dependencia par) y el catálogo no se crea, salvo que una spec lo pida.
 - Librería de validación aparte (Zod u otras): se usan las validaciones de campo de Payload y funciones puras en `src/lib`.
 
