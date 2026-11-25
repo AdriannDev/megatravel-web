@@ -1,7 +1,7 @@
 # Graph Report - megatravel-web  (2026-11-25)
 
 ## Corpus Check
-- 28 files · ~11,769 words
+- 28 files · ~11,794 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 3 file(s) not represented in the graph (top: (none) 2, .toml 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a8ed0c6a`
+- Built from commit: `2bd25905`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -38,9 +38,9 @@
 3. `Brief` - 9 edges
 4. `Spec NNN · [Nombre]` - 8 edges
 5. `ok()` - 7 edges
-6. `00 · Proyecto` - 6 edges
-7. `load_config()` - 6 edges
-8. `read_event()` - 6 edges
+6. `load_config()` - 6 edges
+7. `read_event()` - 6 edges
+8. `00 · Proyecto` - 6 edges
 9. `ADR-NNN · [Título de la decisión]` - 6 edges
 10. `Arquitectura` - 6 edges
 
