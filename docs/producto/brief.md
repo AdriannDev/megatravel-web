@@ -1,6 +1,6 @@
 # Brief · Megatravel Web
 
-Estado: **listo para revisión** (v1, 2026-11-25). Validado por el Product Analyst contra `requisitos.md` y el inventario de bloqueosweb. Las preguntas P1–P10 se hicieron al Board en MEG-7 en un solo comentario y **el Board respondió el 2026-11-25**; las respuestas están incorporadas. Lo que sigue abierto queda marcado `[NEEDS CLARIFICATION]`. Pendiente de aprobación del Arquitecto.
+Estado: **listo para revisión** (v2, 2026-11-25). Validado por el Product Analyst contra `requisitos.md` y el inventario de bloqueosweb. Las preguntas P1–P10 se hicieron al Board en MEG-7 en un solo comentario y **el Board respondió el 2026-11-25**; las respuestas están incorporadas. Lo que sigue abierto queda marcado `[NEEDS CLARIFICATION]`. Pendiente de aprobación del Arquitecto.
 
 ## Problema
 bloqueosmegatravel.pe es hoy una landing de bloqueos. Se quiere convertir en una **web de viajes para asesores de agencias de Perú**, con contenido rico por programa y un CMS hecho a medida para que el equipo de producto cree y mantenga todo sin depender de desarrollo.
@@ -38,16 +38,16 @@ Roles del CMS (P1): **Editor, Administrador y Marketing**. Los tres pueden publi
 
 ## Datos
 - Contenido público: programas, salidas, tarifas, imágenes, banners.
-- **Fotos de pasajeros**: contienen imágenes de personas. Decisión del Board (P4): se gestionan internamente fuera del sistema; el CMS las trata como una subida normal de contenido, sin condicionar la subida a un consentimiento registrado. Se mantiene la posibilidad de retirarlas.
+- **Fotos de pasajeros**: contienen imágenes de personas. Decisión del Board (P4): el consentimiento lo registra y custodia Megatravel fuera del sistema; el CMS las trata como una subida normal, sin condicionarla. Retirar una foto la elimina del almacenamiento, no solo la oculta (Constitución arts. 13 y 22).
 - **Cuentas del CMS**: credenciales y roles de editores → revisión de seguridad.
 
 ## Métricas de éxito
-- Rendimiento (P5): la web debe ser rápida; piso aceptable de **80 puntos** de rendimiento en móvil, con el objetivo de superarlo.
-- Fatiga mínima al publicar un programa. Idea del Board: **leer un documento Word** con el contenido del programa y volcar sus datos al CMS, porque hoy todo el contenido ya vive en un Word que se envía a clientes. Su factibilidad la evalúa el Arquitecto.
+- Rendimiento (P5): la web debe ser rápida; Core Web Vitals en verde en móvil (Constitución art. 23) en home, listado y detalle, y **80 puntos** de rendimiento como piso adicional.
+- Fatiga mínima al publicar un programa. Idea del Board: **leer un documento Word** con el contenido del programa y volcar sus datos al CMS, porque hoy todo el contenido ya vive en un Word que se envía a clientes. Según el Arquitecto, solo es factible con una plantilla Word de estructura fija; se aplaza a una spec posterior (RF-49, Could). [NEEDS CLARIFICATION: ¿el Board acepta normalizar el Word a una plantilla?]
 - Meta de tiempo de publicación (minutos): no definida. [NEEDS CLARIFICATION: ¿meta en minutos? Opcional]
 
 ## Preguntas abiertas (para la spec 000)
-- P6 (resuelta): se mantienen los parámetros de filtro actuales si no afectan; las otras webs siempre redirigen al home de bloqueos. Queda por resolver cómo conviven `/` como home y como catálogo (ver `requisitos.md`, A.4).
-- P9 (resuelta): basta la vista previa; sin flujo de borrador/revisión obligatorio; se puede publicar directo y corregir después. Falta confirmar si se mantiene el retiro automático por fecha de corte.
+- P6 (resuelta): se mantienen los parámetros de filtro actuales si no afectan; las otras webs siempre redirigen al home de bloqueos. Resuelto por el Arquitecto: `/` es la home y `/` con parámetros redirige con 301 al listado de Bloqueos (RF-45b).
+- P9 (resuelta): basta la vista previa; sin flujo de borrador/revisión obligatorio; se puede publicar directo y corregir después. Falta confirmar si se mantiene el retiro automático por fecha de corte y si reactivar un retirado exige confirmación (RF-23, RF-41b).
 - Moneda: el Board indicó solo USD; hoy existen salidas en PEN. [NEEDS CLARIFICATION: ¿qué se hace con las salidas actuales en PEN?]
 - Sin dueño aún: ¿existe fuente para migrar el contenido rico del detalle (itinerario, hoteles, tarifas) o se carga a mano? El inventario actual solo cubre salidas.
