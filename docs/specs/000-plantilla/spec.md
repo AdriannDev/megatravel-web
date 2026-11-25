@@ -23,7 +23,7 @@ Autor: Product Analyst · Requisitos que cubre: [RF-xx, …]
 - [ ]
 
 ## Seguridad y datos
-[¿Toca auth, roles, subida de archivos o datos personales? Si sí, revisa Security.]
+[¿Toca auth, roles, subida de archivos o datos personales? Si sí, las tareas van marcadas "Sensible: sí" y el Code Reviewer aplica su bloque de seguridad.]
 
 ## Dudas
 - [NEEDS CLARIFICATION: ]

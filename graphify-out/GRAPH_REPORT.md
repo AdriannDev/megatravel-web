@@ -1,14 +1,19 @@
 # Graph Report - megatravel-web  (2026-11-25)
 
 ## Corpus Check
-- 24 files · ~3,668 words
+- 28 files · ~11,769 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 1 file(s) not represented in the graph (top: (none) 1)
+- Unclassified: 3 file(s) not represented in the graph (top: (none) 2, .toml 1)
 
 ## Summary
-- 112 nodes · 119 edges · 16 communities (11 shown, 5 thin omitted)
+- 117 nodes · 124 edges · 16 communities (11 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `a8ed0c6a`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - _common.py
@@ -21,21 +26,21 @@
 - Arquitectura
 - Plan · Spec NNN
 - Requisitos
-- Roadmap
+- Primera tanda de issues (las crea el Board en Paperclip)
 - Mapa de código
 - CLAUDE.md
 - README.md
 - tasks.md
 
 ## God Nodes (most connected - your core abstractions)
-1. `[NOMBRE DEL PROYECTO]` - 10 edges
+1. `Megatravel Web` - 10 edges
 2. `Constitución` - 9 edges
 3. `Brief` - 9 edges
 4. `Spec NNN · [Nombre]` - 8 edges
 5. `ok()` - 7 edges
-6. `load_config()` - 6 edges
-7. `read_event()` - 6 edges
-8. `00 · Proyecto` - 6 edges
+6. `00 · Proyecto` - 6 edges
+7. `load_config()` - 6 edges
+8. `read_event()` - 6 edges
 9. `ADR-NNN · [Título de la decisión]` - 6 edges
 10. `Arquitectura` - 6 edges
 
@@ -69,7 +74,7 @@ Nodes (8): Comportamiento que no debe cambiar, Criterios de aceptación, Dudas, 
 
 ### Community 5 - "00 · Proyecto"
 Cohesion: 0.29
-Nodes (6): 00 · Proyecto, Cambios de perfil, Equipo activo (según perfil), Ficha, Límites, Ramas
+Nodes (6): 00 · Proyecto, Cambios de perfil, Equipo activo, Ficha, Límites, Ramas
 
 ### Community 6 - "ADR-NNN · [Título de la decisión]"
 Cohesion: 0.29
@@ -87,9 +92,9 @@ Nodes (6): Complejidad justificada, Diseño, Inventario de reutilización (oblig
 Cohesion: 0.50
 Nodes (3): Funcionales, No funcionales, Requisitos
 
-### Community 10 - "Roadmap"
-Cohesion: 0.50
-Nodes (3): Roadmap, Ruta corta, Specs
+### Community 10 - "Primera tanda de issues (las crea el Board en Paperclip)"
+Cohesion: 0.22
+Nodes (8): ADR-001 · Stack y CMS — Arquitecto (revisión: Code Reviewer) · bloqueado por Spec 000 e Investigación, CP0 · Arranque del proyecto — Auditor, Investigación de stack y CMS — Researcher (revisión: Arquitecto), Primera tanda de issues (las crea el Board en Paperclip), Roadmap · Megatravel Web, Ruta corta, Spec 000 · Brief y requisitos — Product Analyst (revisión: Arquitecto), Specs
 
 ## Knowledge Gaps
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
