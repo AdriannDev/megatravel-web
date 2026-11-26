@@ -1,46 +1,79 @@
-# Megatravel Web
+# [NOMBRE DEL PROYECTO]
 
-<!-- Fuente única de reglas para todos los agentes (Codex y Antigravity la leen directo; Claude vía CLAUDE.md). Máximo 150 líneas. -->
+<!-- Fuente única de reglas para todos los agentes (Codex lo lee directo; Claude vía CLAUDE.md). Máximo 150 líneas. Dueño: Arquitecto. -->
 
 ## Qué es
-Rediseño completo de bloqueosmegatravel.pe: web de viajes para asesores de agencias de Perú (home de contenido, listados de Bloqueos/Circuitos/zonas y detalle de programa) alimentada por un CMS a medida para el equipo de producto. Las reservas siguen en Meganet. Brief: `docs/producto/brief.md`.
-Perfil: **M** (ver `docs/00-proyecto.md`). Marco del equipo: `/home/producto/dev/marco-equipo`.
-**La web actual (repo `bloqueosweb`) sigue en producción sin cambios hasta el lanzamiento: no se modifica ni se conecta a su base de datos.**
+[Una o dos frases: qué hace y para quién.] Brief: `docs/producto/brief.md`.
+Perfil: **[S | M | L]** (ver `docs/00-proyecto.md`). Marco del equipo: `/home/producto/dev/marco-equipo`.
+Stack: [del ADR-001]. Tokens: `[ruta]`. Preview de `develop`: `[URL]`.
 
 ## Dónde está cada cosa
 | Necesito | Archivo |
 |---|---|
-| Perfil, equipo activo y límites | `docs/00-proyecto.md` |
-| Requisitos | `docs/producto/requisitos.md` |
+| Perfil y límites | `docs/00-proyecto.md` |
+| Requisitos (`RF-xx`, `RNF-xx`) | `docs/producto/requisitos.md` |
 | Reglas no negociables | `docs/arquitectura/constitucion.md` |
 | Decisiones (stack, dependencias) | `docs/arquitectura/adr/` |
 | Dónde va cada tipo de código | `docs/arquitectura/mapa-de-codigo.md` |
-| Qué construir ahora | `docs/specs/NNN-*/` (spec, plan, tasks) |
+| Qué construir: spec, UX y API | `docs/specs/NNN-*/spec.md`, `ux.md`, `api.md` |
 | Orden de las specs | `docs/roadmap.md` |
-| Informes de checkpoints | `docs/auditoria/` |
+| Despliegue y rollback | `docs/ops/runbook.md` |
+
+**Repo y Paperclip:**
+- En el repo va lo que un agente futuro necesita para construir: lo de la tabla de arriba, más el código y los tests.
+- En Paperclip va el proceso: contratos, handoffs, veredictos, documentos `qa` y `dictamen`, capturas y estado de las tareas.
 
 ## Cómo se trabaja (siempre)
-1. **El issue de Paperclip es tu contrato.** Lee solo su "Lectura mínima"; no explores el repo por tu cuenta.
-2. **No implementes nada que no esté en una spec aprobada** (o en un issue de ruta corta). Si falta algo en la spec, dilo en el issue; no lo inventes.
-3. **Reutiliza antes de crear.** Antes de escribir una función, componente, hook o tipo, ejecuta `graphify query`. Si existe algo equivalente, úsalo o extiéndelo.
-4. **Lo mínimo que cumple la spec.** Sin abstracciones hasta el tercer uso real, sin capas que envuelvan el framework, sin parámetros "por si acaso".
-5. **Ninguna dependencia nueva sin ADR** aprobado.
-6. **Quédate en tu alcance**: solo los archivos permitidos del contrato y dentro de su presupuesto (archivos y líneas).
-7. **Evidencia**: termina con la salida de tests/lint/build o capturas; nunca solo "listo".
-8. **Nunca toques `main`** (ni push, ni checkout, ni merge). Trabaja en la rama de tu issue; DevOps integra en `develop`.
-9. **No debilites CI**: no bajes umbrales, no saltes tests, no añadas ignores sin ADR.
-10. **No leas ni edites** `.env*`, secretos ni lockfiles; pide el nombre de la variable en el issue.
+1. **El issue es tu contrato.** Su `Tipo` dice qué skill usar. Lee solo su *Lectura mínima*: no explores el repo.
+2. **Nada sin spec aprobada** (o issue de ruta corta). Si falta algo, dilo en el issue; no lo inventes.
+3. **Reutiliza antes de crear**: `graphify query` antes de escribir una función, componente, hook o tipo.
+4. **Lo mínimo que cumple**: ninguna abstracción hasta el tercer uso real, ninguna capa sobre el framework, nada "por si acaso".
+5. **Ninguna dependencia nueva sin ADR** aprobado por el Board.
+6. **Tu alcance**: solo los archivos permitidos y dentro del presupuesto.
+7. **Evidencia**: salida de tests, lint o build, o capturas. Nunca solo "listo".
+8. **Nunca toques `main`.** Trabajas en la rama de tu issue; solo DevOps integra en `develop`.
+9. **No debilites la CI**: ni umbrales, ni tests saltados, ni `ignore` sin ADR.
+10. **No leas ni edites** `.env*` (salvo `.env.example`) ni secretos; pide el nombre de la variable. Los lockfiles solo los actualiza DevOps, con el gestor de paquetes y con ADR.
+
+## Cómo respondes
+- **Formato**: solo la plantilla de tu skill. No repites el contrato, no explicas teoría ni resumes lo que ya está enlazado.
+- **Comentarios**: 15 líneas como máximo, salvo las tablas de evidencia.
+- **Preguntas al Board**: con tarjetas (`ask_user_questions` o `request_confirmation`), todas en una y con opciones concretas. Después, el issue va a `in_review`.
+- **`complain` y `suggestion-box`**: Paperclip las monta siempre, pero este equipo no las usa. Las propuestas de mejora van en la "Salud del proceso" del dictamen pre-merge.
+
+## Severidad y veredictos (únicos para todo el equipo)
+| Nivel | Significa | Efecto |
+|---|---|---|
+| **P0** | Caída, pérdida o corrupción de datos, seguridad o permisos, flujo principal inusable | Bloquea |
+| **P1** | Incumple un criterio (`R`, `UX` o API) o rompe el contrato | Bloquea |
+| **P2** | Fallo menor con alternativa, o desviación de token o copy | No bloquea: va al issue de ajustes de la spec |
+| **P3** | Cosmético o mejora | No bloquea: va al backlog |
+
+**Veredictos:**
+- `APROBADO`: sin hallazgos.
+- `APROBADO CON NOTAS`: solo P2 o P3.
+- `CAMBIOS REQUERIDOS`: hay algún P0 o P1.
+
+**Rondas:**
+- Como máximo **2** por revisión o verificación.
+- La 2.ª solo comprueba los hallazgos de la 1.ª; algo nuevo solo bloquea si es una regresión.
+- Después, el Orquestador corta el ciclo.
 
 ## Contexto (semáforo)
-- Ventana de trabajo: 200k tokens. **Verde** < 40 %: trabaja. **Amarillo** 40–50 %: termina el paso, haz handoff y cierra el run. **Rojo** (compactación): handoff con "Contexto: compactado" y cierra.
-- Una tarea que no cabe en una sesión estaba mal dimensionada: dilo en el handoff.
+- **Verde** (< 40 % de 200k): trabaja.
+- **Amarillo** (40–50 %): termina el paso, haz el handoff y cierra.
+- **Rojo** (compactación): handoff con "Contexto: compactado" y cierra.
+
+Una tarea que no cabe en una sesión estaba mal dimensionada.
 
 ## Handoff (al cerrar cada run)
-La skill puede aparecer con sufijo (p. ej. `handoff--7f46fe5d96`): Paperclip lo añade a las skills de la empresa. Si no la encuentras, este formato basta.
-Comentario en el issue: **Hecho · Pendiente · Archivos tocados · Comandos y resultado · Siguiente paso · Contexto**. Actualiza `tasks.md` y haz push de tu rama. Commits en Conventional Commits, en inglés, en imperativo, **sin líneas Co-Authored-By ni menciones a herramientas de IA** (Claude, Codex u otras).
+La skill puede aparecer con sufijo (p. ej. `handoff--7f46fe5d96`). Si no la encuentras, este formato basta.
+- **Comentario en el issue**: **Hecho · Pendiente · Archivos tocados · Comandos y resultado · Siguiente paso · Contexto**.
+- **Rama**: push de tu rama.
+- **Commits**: Conventional Commits, en inglés, en imperativo, **sin Co-Authored-By ni menciones a herramientas de IA**.
 
 ## Comandos
-<!-- Se rellenan en la spec 001 cuando el Arquitecto fije el stack. Solo comandos verificados. -->
+<!-- Los rellena DevOps en la spec 001. Solo comandos verificados. -->
 - Instalar: `[ ]`
 - Desarrollo: `[ ]`
 - Tests rápidos (por zona): `[ ]`
@@ -50,7 +83,7 @@ Comentario en el issue: **Hecho · Pendiente · Archivos tocados · Comandos y r
 
 ## Convenciones
 <!-- Solo lo que difiera de los defaults del formateador. Se rellena en la spec 001. -->
-- Ramas: `main` (solo humano) ← `develop` (integración) ← rama de issue `<ID>-<slug>`.
+- Ramas: `main` (solo el Board) ← `develop` (solo DevOps) ← rama de issue `<ID>-<slug>`.
 - Estructura: ver `docs/arquitectura/mapa-de-codigo.md`.
 
 ## graphify

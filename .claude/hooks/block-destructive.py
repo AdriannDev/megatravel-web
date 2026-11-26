@@ -23,7 +23,7 @@ for pattern in cfg["destructive_patterns"]:
 for regex in cfg.get("protected_branch_regexes", []):
     if re.search(regex, command, flags=re.IGNORECASE):
         block(
-            "main solo lo actualiza el humano tras el checkpoint CP4. Trabaja en tu rama; "
+            "main solo lo actualiza el Board tras el dictamen pre-merge. Trabaja en tu rama; "
             "la integración en develop la hace DevOps."
         )
 ok()

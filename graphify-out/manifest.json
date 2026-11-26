@@ -1,49 +1,49 @@
 {
   ".claude/hooks/_common.py": {
-    "mtime": 1795617891.2328095,
-    "seen": 1795617906.3321009,
+    "mtime": 1795617767.1424894,
+    "seen": 1795732072.3888774,
     "ast_hash": "0fcac09f7b37d465b518152707446513",
     "semantic_hash": ""
   },
   ".claude/hooks/block-destructive.py": {
-    "mtime": 1795617891.2312584,
-    "seen": 1795617906.3321056,
-    "ast_hash": "13536983d23b28106719167fea385392",
+    "mtime": 1795728199.1529288,
+    "seen": 1795732072.3888824,
+    "ast_hash": "01e2414028b3bb86916a034a36fb79b0",
     "semantic_hash": ""
   },
   ".claude/hooks/hooks.config.json": {
-    "mtime": 1795617891.2324777,
-    "seen": 1795617906.3321075,
+    "mtime": 1795617809.0306966,
+    "seen": 1795732072.3888848,
     "ast_hash": "99711004601dcf2d0c1b204aad87e123",
     "semantic_hash": ""
   },
   ".claude/hooks/pre-compact.py": {
-    "mtime": 1795617891.2315469,
-    "seen": 1795617906.3321085,
+    "mtime": 1795617808.070029,
+    "seen": 1795732072.3888862,
     "ast_hash": "43250403f1a496fa82a3aaa9aca281cc",
     "semantic_hash": ""
   },
   ".claude/hooks/protect-files.py": {
-    "mtime": 1795617891.2327113,
-    "seen": 1795617906.3321092,
+    "mtime": 1795617767.133774,
+    "seen": 1795732072.3888876,
     "ast_hash": "053637085195c281c60ef7d1d68170be",
     "semantic_hash": ""
   },
   ".claude/hooks/session-start.py": {
-    "mtime": 1795617891.2316904,
-    "seen": 1795617906.3321102,
+    "mtime": 1795617808.303917,
+    "seen": 1795732072.3888884,
     "ast_hash": "49d34f3e0fb6d57e2d49b3dc2ba3338e",
     "semantic_hash": ""
   },
   ".claude/hooks/stop-checks.py": {
-    "mtime": 1795617891.2317832,
-    "seen": 1795617906.3321111,
+    "mtime": 1795617815.326038,
+    "seen": 1795732072.388889,
     "ast_hash": "e4611926f600f933ca1589ca222e8b77",
     "semantic_hash": ""
   },
   ".claude/settings.json": {
-    "mtime": 1795626482.070641,
-    "seen": 1795626722.6596513,
+    "mtime": 1795732065.8035583,
+    "seen": 1795732072.3888896,
     "ast_hash": "c0c3eb70f95f3920a54dd0d68711d75c",
     "semantic_hash": ""
   },
@@ -54,93 +54,63 @@
     "semantic_hash": ""
   },
   ".githooks/reference-transaction": {
-    "mtime": 1795617891.2331057,
-    "seen": 1795617906.3321128,
-    "ast_hash": "b56319f3c68a68b68e2b1683b3a17f3b",
+    "mtime": 1795728199.153169,
+    "seen": 1795732072.3888965,
+    "ast_hash": "62a575ab35ef3822ba821629abae0cf3",
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1795632518.487071,
-    "seen": 1795633342.0505006,
-    "ast_hash": "76299d35e463cb6576b0e84a02e8f8a4",
+    "mtime": 1795732065.8143995,
+    "seen": 1795732072.3888972,
+    "ast_hash": "1a6182fedbd7f652f9288ecd5e0de0ee",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1795617905.758281,
-    "seen": 1795617906.3321145,
+    "mtime": 1795617865.4562278,
+    "seen": 1795732072.3888981,
     "ast_hash": "10f99e4ece36df0b70bd9ebfe7cf0587",
     "semantic_hash": ""
   },
   "docs/00-proyecto.md": {
-    "mtime": 1795626432.071215,
-    "seen": 1795626722.6596599,
-    "ast_hash": "bb87ee49b0e9e99a809c188a498bee3f",
-    "semantic_hash": ""
-  },
-  "docs/arquitectura/adr/ADR-000-plantilla.md": {
-    "mtime": 1795617891.235114,
-    "seen": 1795617906.332116,
-    "ast_hash": "0b705d7850e752fe5d984f46db9bb40c",
+    "mtime": 1795728211.4768136,
+    "seen": 1795732072.3888988,
+    "ast_hash": "25f5433a826dd116a3e3080ad08175f6",
     "semantic_hash": ""
   },
   "docs/arquitectura/arquitectura.md": {
-    "mtime": 1795617891.2351465,
-    "seen": 1795617906.3321168,
+    "mtime": 1795617867.218979,
+    "seen": 1795732072.3888993,
     "ast_hash": "ddeb27d9d113a14b7b41fb293df3b1c6",
     "semantic_hash": ""
   },
   "docs/arquitectura/constitucion.md": {
-    "mtime": 1795617963.390411,
-    "seen": 1795626722.659662,
-    "ast_hash": "610d1c4b4adb0d1468e1348eaa3514c4",
+    "mtime": 1795728199.1519704,
+    "seen": 1795732072.3889,
+    "ast_hash": "e26658762115fdd30fe05c443b0601a3",
     "semantic_hash": ""
   },
   "docs/arquitectura/mapa-de-codigo.md": {
-    "mtime": 1795617891.2351592,
-    "seen": 1795617906.332118,
-    "ast_hash": "7da3ebf34de13e2e75abbb88c54f19da",
-    "semantic_hash": ""
-  },
-  "docs/auditoria/README.md": {
-    "mtime": 1795617891.2363336,
-    "seen": 1795617906.3321187,
-    "ast_hash": "763b97faaca3ad483cef8345cce62c8b",
+    "mtime": 1795728199.1522555,
+    "seen": 1795732072.3889008,
+    "ast_hash": "5eb9cf1059a5aff683de8e26a3fc608c",
     "semantic_hash": ""
   },
   "docs/producto/brief.md": {
-    "mtime": 1795617982.8318336,
-    "seen": 1795626722.6596646,
-    "ast_hash": "2eeee5f769b592c9a78c6d8cb6a164f7",
+    "mtime": 1795617866.3014216,
+    "seen": 1795732072.3889031,
+    "ast_hash": "07e0da5b9e7f0cf38092ee2b459e3a17",
     "semantic_hash": ""
   },
   "docs/producto/requisitos.md": {
-    "mtime": 1795617891.2340515,
-    "seen": 1795617906.3321202,
-    "ast_hash": "029ff6a0757687baf01f1bf06a2ef123",
+    "mtime": 1795728199.1527116,
+    "seen": 1795732072.388904,
+    "ast_hash": "7f9ce23f6683b35ce9f3eb1e87af7e06",
     "semantic_hash": ""
   },
   "docs/roadmap.md": {
-    "mtime": 1795626424.1659782,
-    "seen": 1795626722.659666,
-    "ast_hash": "6e7c62b52320bc56091dae9e9aee74ff",
-    "semantic_hash": ""
-  },
-  "docs/specs/000-plantilla/plan.md": {
-    "mtime": 1795617891.2361135,
-    "seen": 1795617906.3321216,
-    "ast_hash": "d1026ce20e37f8b8bed1da71e6ceea9c",
-    "semantic_hash": ""
-  },
-  "docs/specs/000-plantilla/spec.md": {
-    "mtime": 1795626424.158607,
-    "seen": 1795626722.659668,
-    "ast_hash": "0554258aaf62837469153cdd2676823e",
-    "semantic_hash": ""
-  },
-  "docs/specs/000-plantilla/tasks.md": {
-    "mtime": 1795617891.2361364,
-    "seen": 1795617906.3321233,
-    "ast_hash": "7b00cb5661bbe15356539b2eb7904269",
+    "mtime": 1795728199.1524975,
+    "seen": 1795732072.3889048,
+    "ast_hash": "9d61aab67322e0182021da6e26e4d3de",
     "semantic_hash": ""
   },
   ".githooks/post-checkout": {
@@ -165,6 +135,12 @@
     "mtime": 1795617906.421704,
     "seen": 1795626722.6596565,
     "ast_hash": "81728105258e69cf68aa83612f5b6b3a",
+    "semantic_hash": ""
+  },
+  "docs/ops/runbook.md": {
+    "mtime": 1795728211.8008132,
+    "seen": 1795732072.3889024,
+    "ast_hash": "9a3cd3504af4d3f4437594d297e705cd",
     "semantic_hash": ""
   }
 }

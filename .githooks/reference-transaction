@@ -10,7 +10,7 @@ while read -r old new ref; do
     refs/heads/main|refs/heads/master)
       # Permitir la creación inicial de main en un repo vacío.
       if [ "$old" = "0000000000000000000000000000000000000000" ]; then continue; fi
-      echo "BLOQUEADO: $ref solo lo actualiza el humano tras CP4 (usa ALLOW_MAIN_UPDATE=1 desde tu terminal)." >&2
+      echo "BLOQUEADO: $ref solo lo actualiza el Board tras el dictamen pre-merge (usa ALLOW_MAIN_UPDATE=1 desde tu terminal)." >&2
       exit 1
       ;;
   esac
