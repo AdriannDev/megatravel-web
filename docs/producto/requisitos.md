@@ -1,6 +1,6 @@
 # Requisitos
 
-Estado: borrador (pendiente de aprobación del Board · MEG-25)
+Estado: aprobado por el Board (MEG-25)
 
 Formato EARS. Cada requisito tiene un ID estable (`RF-xx` funcional, `RNF-xx` no funcional) que las specs referencian.
 
@@ -9,12 +9,13 @@ Formato EARS. Cada requisito tiene un ID estable (`RF-xx` funcional, `RNF-xx` no
 | Ubicuo | THE SYSTEM SHALL … |
 | Evento | WHEN <disparador> THE SYSTEM SHALL … |
 | Estado | WHILE <estado> THE SYSTEM SHALL … |
+| Opcional | WHERE <función activada> THE SYSTEM SHALL … |
 | No deseado | IF <condición> THEN THE SYSTEM SHALL … |
 
 **Parte:** `WEB` (web pública) · `CMS` · `AUTO` (automatización) · `TRANS` (transversal).
 **Marcas:**
 - **[PP]**: pendiente de prototipo del CMS. La capacidad está fijada; la interfaz se decide cuando llegue el prototipo.
-- **[FIG]**: el inventario final se confirma contra el Figma `MEGA-TRAVEL-BLOQUEOS`.
+- **[FIG]**: el inventario final se confirma contra el Figma `MEGA-TRAVEL-BLOQUEOS` (acceso de edición abierto por el Board; se hace en la 004).
 
 Spec: número del `docs/roadmap.md`.
 
@@ -39,7 +40,7 @@ Spec: número del `docs/roadmap.md`.
 | RF-10 | THE SYSTEM SHALL mostrar las tarifas en una tabla por tipo de habitación, y en cada salida su precio de referencia en habitación doble, todo en USD. | Must | WEB | 004 |
 | RF-11 | THE SYSTEM SHALL mostrar como precio principal «desde» el menor precio en habitación doble entre las salidas disponibles. | Must | WEB | 002 |
 | RF-12 | WHILE la disponibilidad de una salida está marcada como visible y su cupo tiene un valor mayor que 0 THE SYSTEM SHALL mostrar «Disponibilidad: N». Si el cupo está vacío, no muestra nada. | Must | WEB | 004 |
-| RF-13 | THE SYSTEM SHALL mostrar la etiqueta «Últimas plazas» en las salidas marcadas así, y nunca una etiqueta «Agotado». | Must | WEB | 004 |
+| RF-13 | THE SYSTEM SHALL mostrar la etiqueta «Últimas plazas» en las salidas que el editor marca a mano, y nunca una etiqueta «Agotado». | Must | WEB | 004 |
 | RF-14 | WHEN el cliente pulsa «Cotizar ahora» THE SYSTEM SHALL abrir WhatsApp con un mensaje prellenado con el programa y, si se pulsó desde una salida, también su fecha. | Must | WEB | 004 |
 | RF-15 | THE SYSTEM SHALL mostrar el email y el teléfono de contacto de la agencia. | Must | WEB | 004 |
 | RF-16 | THE SYSTEM SHALL permitir compartir el programa: copiar enlace, WhatsApp y redes sociales. | Must | WEB | 004 |
@@ -101,6 +102,7 @@ Spec: número del `docs/roadmap.md`.
 | RF-48 | THE SYSTEM SHALL ofrecer en el CMS un punto de control de automatizaciones. En v1 muestra el historial de cupos por salida y las retiradas automáticas (RF-20 a RF-22). [PP] | Must | AUTO | 009 |
 | RF-49 | WHEN se ejecuta la sincronización THE SYSTEM SHALL leer el archivo de cupos de cada programa en Google Drive y actualizar los cupos por salida. El estado de la sincronización y sus errores se ven en el punto de control. | Won't (v1) · v1.1 | AUTO | 012 |
 | RF-50 | THE SYSTEM SHALL responder consultas de clientes con un chatbot basado en el contenido de la web. | Won't (v1) · futuro | AUTO | — |
+| RF-51 | WHERE el editor activa el modo umbral en una salida THE SYSTEM SHALL marcar «Últimas plazas» cuando el cupo baja del umbral configurado. La marca manual de RF-13 sigue siendo el modo por defecto. | Could | CMS | 002 |
 
 ## No funcionales
 | ID | Requisito | Medición | Prioridad | Parte |

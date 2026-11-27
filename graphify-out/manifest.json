@@ -96,21 +96,21 @@
     "semantic_hash": ""
   },
   "docs/producto/brief.md": {
-    "mtime": 1795794994.579149,
-    "seen": 1795795027.793849,
-    "ast_hash": "a695e25bc37aa9aaffa0f51011e6a5c7",
+    "mtime": 1795796158.860722,
+    "seen": 1795796160.168551,
+    "ast_hash": "c9b9ac73c5eddc1cb0bd0f9d5137d534",
     "semantic_hash": ""
   },
   "docs/producto/requisitos.md": {
-    "mtime": 1795794994.579042,
-    "seen": 1795795027.79385,
-    "ast_hash": "3b0abb94c40ca3d860be617fc89cd186",
+    "mtime": 1795796150.2865345,
+    "seen": 1795796160.168552,
+    "ast_hash": "381d3626e7c5ffd2a559d6daa86836a2",
     "semantic_hash": ""
   },
   "docs/roadmap.md": {
-    "mtime": 1795795010.5716922,
-    "seen": 1795795027.7938504,
-    "ast_hash": "3f76ba9cd05caefa53fe546b755c179f",
+    "mtime": 1795796158.8635879,
+    "seen": 1795796160.1685526,
+    "ast_hash": "cad0a48c653d538ac27a4345f845ff98",
     "semantic_hash": ""
   },
   ".githooks/post-checkout": {

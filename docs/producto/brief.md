@@ -1,6 +1,6 @@
 # Brief
 
-Estado: borrador (pendiente de aprobación del Board · MEG-25)
+Estado: aprobado por el Board (MEG-25)
 
 ## Problema
 La agencia publica hoy sus programas de viaje en una landing con una grilla de cards y banners. Esa landing tiene poca información editable por programa. Cada programa se gestiona en un documento Word y los cupos en archivos aparte. Subir y actualizar un programa es lento, el cliente no ve el detalle completo (itinerario, salidas, tarifas, condiciones) y el equipo no tiene una herramienta propia para mantener el contenido.
@@ -55,6 +55,6 @@ La v1 funciona si el equipo usa el CMS como herramienta habitual. Valores propue
 
 ## Preguntas abiertas
 No cambian el alcance ni el perfil; se cierran en la spec indicada.
-- [NEEDS CLARIFICATION: acceso del equipo al Figma `MEGA-TRAVEL-BLOQUEOS` (link con permiso de lectura o export de los frames). Sin él no se puede cerrar el inventario final de bloques del detalle. Se cierra en la spec 004.]
-- [NEEDS CLARIFICATION: formato de origen de la importación masiva (Excel o CSV, Word o la web actual). Se cierra en la spec 011.]
-- [NEEDS CLARIFICATION: si la etiqueta «Últimas plazas» la marca el editor o sale de un umbral de cupo. Se cierra en la spec 002.]
+- **Figma `MEGA-TRAVEL-BLOQUEOS`:** resuelto. El Board abrió el acceso de edición; el inventario de bloques del detalle se hace en la spec 004.
+- **Formato de la importación masiva:** se define durante el proyecto, cuando se sepan los datos mínimos que necesita un programa importado. Se cierra en la spec 011.
+- **«Últimas plazas»:** resuelto. La marca el editor a mano (RF-13); el modo por umbral queda como opción activable (RF-51, Could) en la spec 002.
