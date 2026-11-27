@@ -75,12 +75,12 @@ La skill puede aparecer con sufijo (p. ej. `handoff--7f46fe5d96`). Si no la encu
 
 ## Comandos
 <!-- Los rellena DevOps en la spec 001. Solo comandos verificados. -->
-- Instalar: `[ ]`
-- Desarrollo: `[ ]`
-- Tests rápidos (por zona): `[ ]`
-- Sensores rápidos (lint, tipos, jscpd, knip): `[ ]`
-- CI completa: `[ ]`
-- Build: `[ ]`
+- Instalar: `npm ci` (Node 24)
+- Desarrollo: `npm run dev`
+- Tests rápidos (zona App Router): `npm test -- src/app`
+- Sensores rápidos (lint, tipos, jscpd, knip): `npm run lint && npm run typecheck && npm run dup && npm run knip`
+- CI completa: `npm ci && npm run check && npm run build`
+- Build: `npm run build`
 
 ## Convenciones
 <!-- Solo lo que difiera de los defaults del formateador. Se rellena en la spec 001. -->
@@ -103,4 +103,5 @@ Rules:
 
 ## Gotchas
 <!-- Comportamientos no obvios del entorno; lo que un agente hizo mal más de una vez. -->
-- [ ]
+- Conserva el `AGENTS.md` del repo al usar `create-next-app`, que genera uno propio.
+- Mantén `@types/node` en la misma versión mayor que Node. Con `@types/node@^20`, `vitest@5` no instala.
