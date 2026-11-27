@@ -1,17 +1,17 @@
-# Graph Report - MEG-31-Arquitecto  (2026-11-27)
+# Graph Report - MEG-38-Arquitecto  (2026-11-27)
 
 ## Corpus Check
-- 27 files · ~17,595 words
+- 36 files · ~18,121 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 6 file(s) not represented in the graph (top: (none) 5, .toml 1)
+- Unclassified: 7 file(s) not represented in the graph (top: (none) 5, .toml 1, .css 1)
 
 ## Summary
-- 136 nodes · 140 edges · 19 communities (12 shown, 7 thin omitted)
+- 215 nodes · 243 edges · 23 communities (16 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `514de1b4`
+- Built from commit: `96e0af24`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -30,18 +30,22 @@
 - Mapa de código
 - CLAUDE.md
 - ADR-001 · Stack del proyecto
+- package.json
+- react
+- compilerOptions
+- scripts
 
 ## God Nodes (most connected - your core abstractions)
-1. `Megatravel web` - 12 edges
-2. `Spec 001 · Fundaciones` - 11 edges
-3. `Constitución` - 9 edges
-4. `Brief` - 9 edges
-5. `Funcionales` - 9 edges
-6. `ok()` - 7 edges
-7. `ADR-002 · Herramientas de desarrollo, CI y sensores` - 6 edges
-8. `Arquitectura` - 6 edges
-9. `load_config()` - 6 edges
-10. `read_event()` - 6 edges
+1. `compilerOptions` - 16 edges
+2. `Megatravel web` - 12 edges
+3. `Spec 001 · Fundaciones` - 11 edges
+4. `scripts` - 10 edges
+5. `Constitución` - 9 edges
+6. `Brief` - 9 edges
+7. `Funcionales` - 9 edges
+8. `ok()` - 7 edges
+9. `react` - 7 edges
+10. `load_config()` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -49,7 +53,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (19 total, 7 thin omitted)
+## Communities (23 total, 7 thin omitted)
 
 ### Community 0 - "_common.py"
 Cohesion: 0.16
@@ -99,8 +103,37 @@ Nodes (3): Roadmap, Ruta corta, Specs
 Cohesion: 0.33
 Nodes (5): ADR-001 · Stack del proyecto, Alternativas descartadas, Consecuencias, Contexto, Decisión
 
+### Community 14 - "package.json"
+Cohesion: 0.10
+Nodes (26): devDependencies, eslint@^9, eslint-config-next@16.4.6, jscpd@^5, knip@^6, tailwindcss@4.3.3, @tailwindcss/turbopack@4.3.3, @types/node@^24 (+18 more)
+
+### Community 20 - "react"
+Cohesion: 0.13
+Nodes (14): nextConfig, dependencies, next@16.4.6, react@19.3.0, react-dom@19.3.0, vitest@^5, next, react (+6 more)
+
+### Community 21 - "compilerOptions"
+Cohesion: 0.11
+Nodes (18): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+10 more)
+
+### Community 22 - "scripts"
+Cohesion: 0.20
+Nodes (10): scripts, build, check, dev, dup, knip, lint, start (+2 more)
+
 ## Knowledge Gaps
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
-_Not enough signal to generate questions. This usually means the corpus has no AMBIGUOUS edges, no bridge nodes, no INFERRED relationships, and all communities are tightly cohesive. Add more files or run with --mode deep to extract richer edges._
+_Questions this graph is uniquely positioned to answer:_
+
+- **Why does `scripts` connect `scripts` to `package.json`?**
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+- **Should `package.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.10052910052910052 - nodes in this community are weakly interconnected._
+- **Why does `devDependencies` connect `package.json` to `react`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **Should `react` be split into smaller, more focused modules?**
+  _Cohesion score 0.1341991341991342 - nodes in this community are weakly interconnected._
+- **Why does `react` connect `react` to `package.json`?**
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+- **Should `compilerOptions` be split into smaller, more focused modules?**
+  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._

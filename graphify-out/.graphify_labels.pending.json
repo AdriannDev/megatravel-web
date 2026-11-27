@@ -13,9 +13,13 @@
   "11": "Mapa de código",
   "12": "CLAUDE.md",
   "13": "ADR-001 · Stack del proyecto",
+  "14": "package.json",
   "15": "reference-transaction",
   "16": "post-checkout",
   "17": "post-commit",
   "18": "post-merge",
-  "19": "post-rewrite"
+  "19": "post-rewrite",
+  "20": "react",
+  "21": "compilerOptions",
+  "22": "scripts"
 }

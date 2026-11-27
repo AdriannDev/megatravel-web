@@ -1,6 +1,6 @@
 # ADR-002 · Herramientas de desarrollo, CI y sensores
 
-- Estado: **propuesto** (lo aprueba el Board en la revisión de MEG-31)
+- Estado: **aceptado** (Board, revisión de MEG-31)
 - Fecha: 2026-11-27
 - Issue: MEG-31 (spec 001 · Fundaciones)
 - Depende de: ADR-001
