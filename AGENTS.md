@@ -1,11 +1,12 @@
-# [NOMBRE DEL PROYECTO]
+# Megatravel web
 
 <!-- Fuente única de reglas para todos los agentes (Codex lo lee directo; Claude vía CLAUDE.md). Máximo 150 líneas. Dueño: Arquitecto. -->
 
 ## Qué es
-[Una o dos frases: qué hace y para quién.] Brief: `docs/producto/brief.md`.
-Perfil: **[S | M | L]** (ver `docs/00-proyecto.md`). Marco del equipo: `/home/producto/dev/marco-equipo`.
-Stack: [del ADR-001]. Tokens: `[ruta]`. Preview de `develop`: `[URL]`.
+Web pública de programas de viaje de la agencia y CMS a medida para mantenerlos (Producto, Marketing y Administrador). Brief: `docs/producto/brief.md`.
+Perfil: **M** (ver `docs/00-proyecto.md`). Marco del equipo: `/home/producto/dev/marco-equipo`.
+Stack (ADR-001): 1 app Next.js 16 + React + Tailwind v4 + TypeScript · backend integrado (Server Actions y Route Handlers) + Drizzle · PostgreSQL en Railway · medios en Cloudflare R2. Tokens: `[ruta, la fija UX/UI]`. Preview de `develop`: `[URL, la fija DevOps en la 001]`.
+Rutas: web pública en `/` · CMS en `/admin`, en la misma app. **1 sola instancia** de la app (más instancias exigen ADR de caché compartida).
 
 ## Dónde está cada cosa
 | Necesito | Archivo |
