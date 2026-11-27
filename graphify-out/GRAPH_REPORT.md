@@ -1,17 +1,17 @@
-# Graph Report - megatravel-web  (2026-11-26)
+# Graph Report - MEG-25-Orquestador  (2026-11-27)
 
 ## Corpus Check
-- 24 files · ~10,374 words
+- 24 files · ~14,376 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 5 file(s) not represented in the graph (top: (none) 4, .toml 1)
+- Unclassified: 6 file(s) not represented in the graph (top: (none) 5, .toml 1)
 
 ## Summary
-- 102 nodes · 109 edges · 16 communities (9 shown, 7 thin omitted)
+- 111 nodes · 118 edges · 16 communities (9 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2742ea6e`
+- Built from commit: `14a18c3f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -23,22 +23,22 @@
 - Runbook
 - 00 · Proyecto
 - Arquitectura
-- Requisitos
+- Funcionales
 - Roadmap
 - Mapa de código
 - CLAUDE.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `[NOMBRE DEL PROYECTO]` - 12 edges
-2. `Constitución` - 9 edges
-3. `Brief` - 9 edges
-4. `ok()` - 7 edges
-5. `00 · Proyecto` - 6 edges
-6. `Arquitectura` - 6 edges
-7. `Runbook` - 6 edges
-8. `load_config()` - 6 edges
-9. `read_event()` - 6 edges
-10. `block()` - 5 edges
+2. `Brief` - 9 edges
+3. `Funcionales` - 9 edges
+4. `Constitución` - 9 edges
+5. `ok()` - 7 edges
+6. `00 · Proyecto` - 6 edges
+7. `load_config()` - 6 edges
+8. `read_event()` - 6 edges
+9. `Runbook` - 6 edges
+10. `Arquitectura` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -69,16 +69,16 @@ Cohesion: 0.29
 Nodes (6): Desplegar, Entornos, Migraciones, Rollback, Runbook, Variables de entorno
 
 ### Community 5 - "00 · Proyecto"
-Cohesion: 0.29
-Nodes (6): 00 · Proyecto, Cambios de perfil, Equipo activo (según el perfil, ver `docs/07` del marco), Ficha, Límites, Ramas
+Cohesion: 0.25
+Nodes (7): 00 · Proyecto, Cambios de perfil, Equipo activo (según el perfil, ver `docs/07` del marco), Ficha, Justificación del perfil (tabla de `docs/07` del marco), Límites, Ramas
 
 ### Community 7 - "Arquitectura"
 Cohesion: 0.29
 Nodes (6): Arquitectura, Capas y dependencias permitidas, Datos, Decisiones, Entornos, Vista general
 
-### Community 9 - "Requisitos"
-Cohesion: 0.50
-Nodes (3): Funcionales, No funcionales, Requisitos
+### Community 9 - "Funcionales"
+Cohesion: 0.17
+Nodes (11): Automatizaciones, CMS: acceso, roles y permisos, CMS: importación y carga inicial, CMS: medios y documentos, CMS: programas, Funcionales, No funcionales, Requisitos (+3 more)
 
 ### Community 10 - "Roadmap"
 Cohesion: 0.50

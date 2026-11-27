@@ -1,145 +1,145 @@
 {
   ".claude/hooks/_common.py": {
-    "mtime": 1795617767.1424894,
-    "seen": 1795732072.3888774,
+    "mtime": 1795792696.3486013,
+    "seen": 1795795027.7938232,
     "ast_hash": "0fcac09f7b37d465b518152707446513",
     "semantic_hash": ""
   },
   ".claude/hooks/block-destructive.py": {
-    "mtime": 1795728199.1529288,
-    "seen": 1795732072.3888824,
+    "mtime": 1795792696.3487163,
+    "seen": 1795795027.7938302,
     "ast_hash": "01e2414028b3bb86916a034a36fb79b0",
     "semantic_hash": ""
   },
   ".claude/hooks/hooks.config.json": {
-    "mtime": 1795617809.0306966,
-    "seen": 1795732072.3888848,
+    "mtime": 1795792696.3487163,
+    "seen": 1795795027.7938325,
     "ast_hash": "99711004601dcf2d0c1b204aad87e123",
     "semantic_hash": ""
   },
   ".claude/hooks/pre-compact.py": {
-    "mtime": 1795617808.070029,
-    "seen": 1795732072.3888862,
+    "mtime": 1795792696.3487163,
+    "seen": 1795795027.7938337,
     "ast_hash": "43250403f1a496fa82a3aaa9aca281cc",
     "semantic_hash": ""
   },
   ".claude/hooks/protect-files.py": {
-    "mtime": 1795617767.133774,
-    "seen": 1795732072.3888876,
+    "mtime": 1795792696.3487163,
+    "seen": 1795795027.7938344,
     "ast_hash": "053637085195c281c60ef7d1d68170be",
     "semantic_hash": ""
   },
   ".claude/hooks/session-start.py": {
-    "mtime": 1795617808.303917,
-    "seen": 1795732072.3888884,
+    "mtime": 1795792696.3487163,
+    "seen": 1795795027.7938354,
     "ast_hash": "49d34f3e0fb6d57e2d49b3dc2ba3338e",
     "semantic_hash": ""
   },
   ".claude/hooks/stop-checks.py": {
-    "mtime": 1795617815.326038,
-    "seen": 1795732072.388889,
+    "mtime": 1795792696.3487163,
+    "seen": 1795795027.7938366,
     "ast_hash": "e4611926f600f933ca1589ca222e8b77",
     "semantic_hash": ""
   },
   ".claude/settings.json": {
-    "mtime": 1795732065.8035583,
-    "seen": 1795732072.3888896,
+    "mtime": 1795792696.3487163,
+    "seen": 1795795027.7938375,
     "ast_hash": "c0c3eb70f95f3920a54dd0d68711d75c",
     "semantic_hash": ""
   },
   ".codex/hooks.json": {
-    "mtime": 1795617891.5337737,
-    "seen": 1795617906.3321123,
+    "mtime": 1795792696.3505394,
+    "seen": 1795795027.7938383,
     "ast_hash": "005ac71c84af2cae38e255e2b9de2411",
     "semantic_hash": ""
   },
   ".githooks/reference-transaction": {
-    "mtime": 1795728199.153169,
-    "seen": 1795732072.3888965,
+    "mtime": 1795792696.3519135,
+    "seen": 1795795027.7938433,
     "ast_hash": "62a575ab35ef3822ba821629abae0cf3",
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1795732065.8143995,
-    "seen": 1795732072.3888972,
+    "mtime": 1795792696.3519135,
+    "seen": 1795795027.793844,
     "ast_hash": "1a6182fedbd7f652f9288ecd5e0de0ee",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1795617865.4562278,
-    "seen": 1795732072.3888981,
+    "mtime": 1795792696.3519135,
+    "seen": 1795795027.793845,
     "ast_hash": "10f99e4ece36df0b70bd9ebfe7cf0587",
     "semantic_hash": ""
   },
   "docs/00-proyecto.md": {
-    "mtime": 1795728211.4768136,
-    "seen": 1795732072.3888988,
-    "ast_hash": "25f5433a826dd116a3e3080ad08175f6",
+    "mtime": 1795795019.047041,
+    "seen": 1795795027.7938457,
+    "ast_hash": "696ed951c3ef9b1249e11f0b7293fceb",
     "semantic_hash": ""
   },
   "docs/arquitectura/arquitectura.md": {
-    "mtime": 1795617867.218979,
-    "seen": 1795732072.3888993,
+    "mtime": 1795792696.3530233,
+    "seen": 1795795027.7938466,
     "ast_hash": "ddeb27d9d113a14b7b41fb293df3b1c6",
     "semantic_hash": ""
   },
   "docs/arquitectura/constitucion.md": {
-    "mtime": 1795728199.1519704,
-    "seen": 1795732072.3889,
+    "mtime": 1795792696.3530233,
+    "seen": 1795795027.793847,
     "ast_hash": "e26658762115fdd30fe05c443b0601a3",
     "semantic_hash": ""
   },
   "docs/arquitectura/mapa-de-codigo.md": {
-    "mtime": 1795728199.1522555,
-    "seen": 1795732072.3889008,
+    "mtime": 1795792696.3530233,
+    "seen": 1795795027.7938478,
     "ast_hash": "5eb9cf1059a5aff683de8e26a3fc608c",
     "semantic_hash": ""
   },
   "docs/producto/brief.md": {
-    "mtime": 1795617866.3014216,
-    "seen": 1795732072.3889031,
-    "ast_hash": "07e0da5b9e7f0cf38092ee2b459e3a17",
+    "mtime": 1795794994.579149,
+    "seen": 1795795027.793849,
+    "ast_hash": "a695e25bc37aa9aaffa0f51011e6a5c7",
     "semantic_hash": ""
   },
   "docs/producto/requisitos.md": {
-    "mtime": 1795728199.1527116,
-    "seen": 1795732072.388904,
-    "ast_hash": "7f9ce23f6683b35ce9f3eb1e87af7e06",
+    "mtime": 1795794994.579042,
+    "seen": 1795795027.79385,
+    "ast_hash": "3b0abb94c40ca3d860be617fc89cd186",
     "semantic_hash": ""
   },
   "docs/roadmap.md": {
-    "mtime": 1795728199.1524975,
-    "seen": 1795732072.3889048,
-    "ast_hash": "9d61aab67322e0182021da6e26e4d3de",
+    "mtime": 1795795010.5716922,
+    "seen": 1795795027.7938504,
+    "ast_hash": "3f76ba9cd05caefa53fe546b755c179f",
     "semantic_hash": ""
   },
   ".githooks/post-checkout": {
-    "mtime": 1795617906.4216027,
-    "seen": 1795626722.659654,
+    "mtime": 1795792696.3512704,
+    "seen": 1795795027.7938395,
     "ast_hash": "74f885e45f9bfb0c124bf010800e249e",
     "semantic_hash": ""
   },
   ".githooks/post-commit": {
-    "mtime": 1795617906.4214659,
-    "seen": 1795626722.6596549,
+    "mtime": 1795792696.3519135,
+    "seen": 1795795027.7938402,
     "ast_hash": "0c5c04a77f0e6baf244d6ed58e621062",
     "semantic_hash": ""
   },
   ".githooks/post-merge": {
-    "mtime": 1795617906.4216561,
-    "seen": 1795626722.6596556,
+    "mtime": 1795792696.3519135,
+    "seen": 1795795027.7938411,
     "ast_hash": "19d97b6ad913907e0705734150df83f8",
     "semantic_hash": ""
   },
   ".githooks/post-rewrite": {
-    "mtime": 1795617906.421704,
-    "seen": 1795626722.6596565,
+    "mtime": 1795792696.3519135,
+    "seen": 1795795027.793842,
     "ast_hash": "81728105258e69cf68aa83612f5b6b3a",
     "semantic_hash": ""
   },
   "docs/ops/runbook.md": {
-    "mtime": 1795728211.8008132,
-    "seen": 1795732072.3889024,
+    "mtime": 1795792696.3530233,
+    "seen": 1795795027.7938483,
     "ast_hash": "9a3cd3504af4d3f4437594d297e705cd",
     "semantic_hash": ""
   }
