@@ -35,8 +35,8 @@ La agencia publica hoy sus programas de viaje en una landing con una grilla de c
   - CMS de terceros (WordPress, Strapi, Payload, Sanity…). Las librerías sí se permiten.
 
 ## Restricciones
-- **Stack de referencia** (restricción de partida, no decisión): web pública en React, Next.js y Tailwind CSS. El CMS va en TypeScript, en el mismo ecosistema React y Tailwind, y sirve el contenido a la web pública sin fricción. Las piezas concretas se eligen en la spec 001 Fundaciones.
-- **Infraestructura existente:** Railway (hosting), Cloudflare R2 en capa gratuita (imágenes) y dominio propio. Si se mantiene o se cambia lo decide la 001.
+- **Stack de referencia** (restricción de partida, no decisión): web pública en React, Next.js y Tailwind CSS. El CMS va en TypeScript, en el mismo ecosistema React y Tailwind, y sirve el contenido a la web pública sin fricción. Las piezas concretas se eligen en la issue `stack` (MEG-27) con una tarjeta de 4 capas al Board, no en la spec 001.
+- **Infraestructura existente:** Railway (hosting), Cloudflare R2 en capa gratuita (imágenes) y dominio propio. Si se mantiene o se cambia se decide en MEG-27.
 - **Coste:** sin presupuesto asignado; se prefiere el coste mensual mínimo.
 - **Plazo:** sin fecha fija; se deriva del perfil (M) y del roadmap.
 - **Prototipo del CMS:** todavía no existe. Los requisitos del CMS van por capacidad y las decisiones de interfaz quedan como «pendiente de prototipo».

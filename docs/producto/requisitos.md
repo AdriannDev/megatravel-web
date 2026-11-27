@@ -107,7 +107,7 @@ Spec: número del `docs/roadmap.md`.
 ## No funcionales
 | ID | Requisito | Medición | Prioridad | Parte |
 |---|---|---|---|---|
-| RNF-01 | **Restricción de stack.** La web pública usa React, Next.js y Tailwind CSS. El CMS usa TypeScript, el ecosistema React y Tailwind, y sirve el contenido a la web pública sin fricción. No se usa ningún CMS de terceros; las librerías sí. Las piezas concretas se eligen en la 001. | El ADR del stack cumple cada punto | Must | TRANS |
+| RNF-01 | **Restricción de stack.** La web pública usa React, Next.js y Tailwind CSS. El CMS usa TypeScript, el ecosistema React y Tailwind, y sirve el contenido a la web pública sin fricción. No se usa ningún CMS de terceros; las librerías sí. Las piezas concretas se eligen en MEG-27 (tarjeta de 4 capas), no en la 001. | El ADR del stack cumple cada punto | Must | TRANS |
 | RNF-02 | **Coste mensual mínimo.** Se evalúa primero la infraestructura existente: Railway, Cloudflare R2 en capa gratuita y dominio propio. | El ADR del stack incluye una estimación mensual con el volumen de RNF-03 | Must | TRANS |
 | RNF-03 | **Volumen.** ≥ 70 programas activos con crecimiento gradual (diseño para 300). De 1 a 20 salidas por programa (media de 10). De 15 a 20 medios por programa. Videos de hasta 3 min y 100 MB. | Pruebas con datos sintéticos de 300 programas × 20 salidas | Must | TRANS |
 | RNF-04 | **Datos estructurados y legibles por máquina:** campos tipados (salidas, tarifas, itinerario por día, ciudades), no HTML libre, para no bloquear el chatbot. | El modelo de la 002 se exporta a JSON sin parsear HTML | Must | TRANS |

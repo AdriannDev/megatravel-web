@@ -2,7 +2,7 @@
 
 Estado: aprobado por el Board (MEG-25)
 
-**Antes de la 001:** `auditoria` de arranque (Auditor) → `stack` (Arquitecto: ADR del stack y del hosting según RNF-01 y RNF-02) → 001.
+**Antes de la 001:** `auditoria` de arranque (Auditor) → `stack` MEG-27 (Arquitecto: ADR del stack y del hosting según RNF-01 y RNF-02; el Board decide las piezas con una tarjeta de 4 capas) → 001.
 
 ## Specs
 | NNN | Spec | Prioridad | Depende de | Sensible (seguridad) | Estado |
@@ -25,7 +25,7 @@ Estado: aprobado por el Board (MEG-25)
 
 **Paralelismo posible:** 003, 004, 005 y 006 dependen solo de la 002 y pueden ir en olas paralelas. Las specs 008 a 010 pueden ir en paralelo cuando llegue el prototipo.
 
-**Preguntas para la 001 y el ADR de stack:**
+**Preguntas para el ADR de stack (MEG-27):**
 - ¿Una app Next.js con el CMS dentro o un monorepo con dos apps?
 - Base de datos y ORM.
 - Autenticación y roles.
