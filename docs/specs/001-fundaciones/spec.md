@@ -83,10 +83,12 @@ N/A: las páginas son esqueletos sin diseño. Los tokens y `ux.md` llegan en la 
 ## 10. Tareas
 | ID | Tarea | Dueño | Tipo | Criterios | Archivos previstos | Verificación | Ola | Sensible |
 |---|---|---|---|---|---|---|---|---|
-| T1 | Scaffold de la app con todas las dependencias de ADR-001 y ADR-002, scripts y config de ESLint | DevOps | tarea | R1, R4, R5, R6, R11 | `package.json`, `package-lock.json`, `tsconfig.json`, `next.config.ts`, `eslint.config.mjs`, `.gitignore`, `src/app/layout.tsx`, `src/app/globals.css` (8) | `npm ci`, `npm run lint`, `npm run typecheck`, `npm run dup` y `npm run build` → exit 0. R11 con `git status`. Fallos provocados de R4 a R6 en el handoff. `npm test` aún falla (no hay tests): es lo esperado | 1 | no |
+| T1 | Scaffold de la app con las dependencias de ADR-002 y las de ADR-001 que usa esta spec (Next.js, React, Tailwind y TypeScript), scripts y config de ESLint | DevOps | tarea | R1, R4, R5, R6, R11 | `package.json`, `package-lock.json`, `tsconfig.json`, `next.config.ts`, `eslint.config.mjs`, `.gitignore`, `src/app/layout.tsx`, `src/app/globals.css` (8) | `npm ci`, `npm run lint`, `npm run typecheck`, `npm run dup` y `npm run build` → exit 0. R11 con `git status`. `npm run knip` → exit 0. Fallos provocados de R4 a R6 en el handoff. `npm test` aún falla (no hay tests): es lo esperado | 1 | no |
 | T2 | Páginas `/` y `/admin` con sus tests | Frontend | tarea | R2, R3, R8 | `src/app/page.tsx`, `src/app/page.test.tsx`, `src/app/admin/page.tsx`, `src/app/admin/page.test.tsx` (4) | `npm test`, `npm run build` y `curl` a `/` y `/admin` (código y `noindex`). Fallo provocado de R8 en el handoff | 2 | no |
 | T3 | Workflow de CI y comandos verificados en `AGENTS.md` | DevOps | tarea | R7, R9, R10, R12 | `.github/workflows/ci.yml`, `AGENTS.md` (solo «Comandos» y «Gotchas») (2) | `npm run check` y `npm run build` → exit 0, más fallos provocados de R7 y R9. Enlace al job `ci` en verde. Cada comando de R12 con su salida | 3 | no |
 | T4 | Mapa de código: zona de páginas y tests | Arquitecto | tarea | — (§6, «Mapa de código») | `docs/arquitectura/mapa-de-codigo.md` (1) | Las filas «Páginas / rutas» y «Tests» apuntan a archivos que existen | 3 | no |
+
+Drizzle, `drizzle-kit`, `pg` y `@aws-sdk/client-s3` siguen aprobados en ADR-001, pero no se instalan en esta spec: sin código que los use, `knip` (R7) falla. Los instala la spec que los usa (decisión del Board en MEG-33).
 
 **Orden:** T1 → T2 → (T3 ‖ T4). T2 necesita las dependencias de T1. T3 necesita los tests de T2 para que `npm test` y la CI pasen. T3 y T4 no comparten archivos.
 
