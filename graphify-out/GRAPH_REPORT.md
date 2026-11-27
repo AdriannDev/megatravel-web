@@ -1,17 +1,17 @@
-# Graph Report - MEG-25-Orquestador  (2026-11-27)
+# Graph Report - MEG-31-Arquitecto  (2026-11-27)
 
 ## Corpus Check
-- 24 files · ~14,441 words
+- 27 files · ~17,595 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 5, .toml 1)
 
 ## Summary
-- 111 nodes · 118 edges · 16 communities (9 shown, 7 thin omitted)
+- 136 nodes · 140 edges · 19 communities (12 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a1feccad`
+- Built from commit: `514de1b4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,23 +22,26 @@
 - Brief
 - Runbook
 - 00 · Proyecto
+- Spec 001 · Fundaciones
 - Arquitectura
+- ADR-002 · Herramientas de desarrollo, CI y sensores
 - Funcionales
 - Roadmap
 - Mapa de código
 - CLAUDE.md
+- ADR-001 · Stack del proyecto
 
 ## God Nodes (most connected - your core abstractions)
-1. `[NOMBRE DEL PROYECTO]` - 12 edges
-2. `Brief` - 9 edges
-3. `Funcionales` - 9 edges
-4. `Constitución` - 9 edges
-5. `ok()` - 7 edges
-6. `load_config()` - 6 edges
-7. `read_event()` - 6 edges
-8. `Runbook` - 6 edges
-9. `00 · Proyecto` - 6 edges
-10. `Arquitectura` - 6 edges
+1. `Megatravel web` - 12 edges
+2. `Spec 001 · Fundaciones` - 11 edges
+3. `Constitución` - 9 edges
+4. `Brief` - 9 edges
+5. `Funcionales` - 9 edges
+6. `ok()` - 7 edges
+7. `ADR-002 · Herramientas de desarrollo, CI y sensores` - 6 edges
+8. `Arquitectura` - 6 edges
+9. `load_config()` - 6 edges
+10. `read_event()` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -46,7 +49,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (16 total, 7 thin omitted)
+## Communities (19 total, 7 thin omitted)
 
 ### Community 0 - "_common.py"
 Cohesion: 0.16
@@ -72,9 +75,17 @@ Nodes (6): Desplegar, Entornos, Migraciones, Rollback, Runbook, Variables de ent
 Cohesion: 0.25
 Nodes (7): 00 · Proyecto, Cambios de perfil, Equipo activo (según el perfil, ver `docs/07` del marco), Ficha, Justificación del perfil (tabla de `docs/07` del marco), Límites, Ramas
 
+### Community 6 - "Spec 001 · Fundaciones"
+Cohesion: 0.17
+Nodes (11): 10. Tareas, 1. Problema y objetivo, 2. Requisitos, 3. No debe cambiar, 4. Fuera de alcance, 5. Inventario de reutilización, 6. Diseño, 7. Complejidad justificada (+3 more)
+
 ### Community 7 - "Arquitectura"
 Cohesion: 0.29
 Nodes (6): Arquitectura, Capas y dependencias permitidas, Datos, Decisiones, Entornos, Vista general
+
+### Community 8 - "ADR-002 · Herramientas de desarrollo, CI y sensores"
+Cohesion: 0.29
+Nodes (6): ADR-002 · Herramientas de desarrollo, CI y sensores, Alternativas descartadas, Consecuencias, Contexto, Decisión, Fuentes (consultadas el 2026-11-27)
 
 ### Community 9 - "Funcionales"
 Cohesion: 0.17
@@ -83,6 +94,10 @@ Nodes (11): Automatizaciones, CMS: acceso, roles y permisos, CMS: importación y
 ### Community 10 - "Roadmap"
 Cohesion: 0.50
 Nodes (3): Roadmap, Ruta corta, Specs
+
+### Community 13 - "ADR-001 · Stack del proyecto"
+Cohesion: 0.33
+Nodes (5): ADR-001 · Stack del proyecto, Alternativas descartadas, Consecuencias, Contexto, Decisión
 
 ## Knowledge Gaps
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
