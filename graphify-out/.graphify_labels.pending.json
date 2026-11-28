@@ -21,5 +21,8 @@
   "19": "post-rewrite",
   "20": "react",
   "21": "compilerOptions",
-  "22": "scripts"
+  "22": "scripts",
+  "23": "ci.yml",
+  "24": "Spec 001b · Datos y acceso al CMS",
+  "25": "ADR-003 · Sesiones y hash de contraseñas del CMS"
 }
