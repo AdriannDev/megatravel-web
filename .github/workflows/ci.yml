@@ -12,6 +12,20 @@ permissions:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: megatravel
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: megatravel_test
+        ports:
+          - 5432/tcp
+        options: >-
+          --health-cmd "pg_isready -U megatravel -d megatravel_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
     steps:
       - uses: actions/checkout@v7
         with:
@@ -22,4 +36,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check
+        env:
+          TEST_DATABASE_URL: postgresql://megatravel:test@127.0.0.1:${{ job.services.postgres.ports[5432] }}/megatravel_test
       - run: npm run build

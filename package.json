@@ -11,10 +11,14 @@
     "dup": "jscpd --threshold 3 --exit-code 1 src",
     "knip": "knip",
     "test": "vitest run",
-    "check": "npm run lint && npm run typecheck && npm run dup && npm run knip && npm test"
+    "check": "npm run lint && npm run typecheck && npm run dup && npm run knip && npm test",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
+    "drizzle-orm": "0.45.4",
     "next": "16.4.6",
+    "pg": "8.23.1",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
@@ -23,6 +27,7 @@
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "drizzle-kit": "0.31.11",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
     "jscpd": "^5",
