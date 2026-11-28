@@ -1,7 +1,7 @@
 # Spec 001 · Fundaciones
 
-Estado: borrador
-Autor: Arquitecto · Requisitos que cubre: RNF-01 (stack), constitución art. 9 (sensores) · ADR: ADR-001 (aceptado), ADR-002 (propuesto en esta spec)
+Estado: aprobada por el Board ([MEG-31](/MEG/issues/MEG-31)) · SHA aprobado: de83f19
+Autor: Arquitecto · Requisitos que cubre: RNF-01 (stack), constitución art. 9 (sensores) · ADR: ADR-001 (aceptado), ADR-002 (aceptado, MEG-31)
 
 ## 1. Problema y objetivo
 El repo solo tiene documentación: no hay app, CI ni sensores, y la sección «Comandos» de `AGENTS.md` está vacía. Sin esa base, ninguna spec posterior puede integrar con garantías. Al terminar, existe la app Next.js con `/` y `/admin` como esqueletos. Lint, tipos, duplicación, código muerto y tests corren con un solo comando en local y en la CI de cada PR a `develop`. Cualquier agente encuentra en `AGENTS.md` los comandos verificados.

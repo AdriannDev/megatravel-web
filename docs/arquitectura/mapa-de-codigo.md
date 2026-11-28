@@ -5,11 +5,11 @@ Dónde va cada tipo de cosa. Corto a propósito: el índice detallado es el graf
 | Tipo de código | Carpeta | Ejemplo existente |
 |---|---|---|
 | [Componentes de UI reutilizables] | | |
-| [Páginas / rutas] | | |
+| Páginas / rutas | `src/app/**` (App Router: `page.tsx`, `layout.tsx`) | `src/app/page.tsx`, `src/app/admin/page.tsx`, `src/app/layout.tsx` |
 | [Acceso a datos] | | |
 | [Utilidades puras] | | |
 | [Tipos compartidos] | | |
-| [Tests] | | |
+| Tests | Junto al módulo: `*.test.ts(x)` | `src/app/page.test.tsx`, `src/app/admin/page.test.tsx` |
 
 ## Reglas de ubicación
 - Si una utilidad la usa un solo módulo, vive junto a ese módulo; pasa a la carpeta compartida al tercer uso.
